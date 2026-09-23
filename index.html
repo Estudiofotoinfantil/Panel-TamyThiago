@@ -1,0 +1,1437 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Tamy & Thiago | Panel</title>
+
+<style>
+
+/* =====================================================
+   BASE
+===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+
+:root {
+
+    --fondo: #f8f5f2;
+    --blanco: rgba(255,255,255,.90);
+
+    --texto: #514a48;
+    --suave: #8d8581;
+
+    --rosa: #c9a5aa;
+    --rosa-claro: #eadbdd;
+
+    --verde: #819b8a;
+    --verde-claro: #e0e9e2;
+
+    --rojo: #b77d7d;
+    --rojo-claro: #f0dddd;
+
+    --dorado: #b69b72;
+
+    --borde: rgba(120,100,90,.15);
+
+}
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+
+    margin: 0;
+
+    min-height: 100vh;
+
+    color: var(--texto);
+
+    font-family: 'Montserrat', sans-serif;
+
+    background:
+
+        radial-gradient(
+            circle at 10% 5%,
+            rgba(201,165,170,.18),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 90% 15%,
+            rgba(182,155,114,.13),
+            transparent 30%
+        ),
+
+        linear-gradient(
+            180deg,
+            #faf7f4 0%,
+            #f6f1ee 100%
+        );
+
+}
+
+
+/* =====================================================
+   DECORACIÓN DE FONDO
+===================================================== */
+
+body::before {
+
+    content: "";
+
+    position: fixed;
+
+    width: 260px;
+    height: 260px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(182,155,114,.14);
+
+    top: -130px;
+    left: -130px;
+
+    pointer-events: none;
+
+}
+
+
+body::after {
+
+    content: "";
+
+    position: fixed;
+
+    width: 300px;
+    height: 300px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(201,165,170,.13);
+
+    right: -160px;
+    bottom: -160px;
+
+    pointer-events: none;
+
+}
+
+
+/* =====================================================
+   CONTENEDOR
+===================================================== */
+
+.contenedor {
+
+    width: min(1120px, 92%);
+
+    margin: auto;
+
+    padding: 45px 0 60px;
+
+}
+
+
+/* =====================================================
+   ENCABEZADO
+===================================================== */
+
+.encabezado {
+
+    text-align: center;
+
+    margin-bottom: 35px;
+
+}
+
+
+.marca {
+
+    color: var(--dorado);
+
+    font-size: 10px;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 12px;
+
+}
+
+
+h1 {
+
+    margin: 0;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: clamp(48px, 7vw, 72px);
+
+    line-height: .95;
+
+    font-weight: 500;
+
+    letter-spacing: .5px;
+
+}
+
+
+.subtitulo {
+
+    margin-top: 12px;
+
+    color: var(--suave);
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+}
+
+
+.decoracion {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin: 18px 0;
+
+}
+
+
+.decoracion::before,
+.decoracion::after {
+
+    content: "";
+
+    width: 60px;
+
+    height: 1px;
+
+    background: var(--rosa);
+
+}
+
+
+.decoracion span {
+
+    color: var(--dorado);
+
+    font-size: 14px;
+
+}
+
+
+/* =====================================================
+   TARJETAS
+===================================================== */
+
+.resumen {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 15px;
+
+    margin-bottom: 28px;
+
+}
+
+
+.tarjeta {
+
+    background: var(--blanco);
+
+    border: 1px solid var(--borde);
+
+    border-radius: 20px;
+
+    padding: 23px 15px;
+
+    text-align: center;
+
+    box-shadow:
+        0 12px 35px rgba(80,60,50,.055);
+
+    backdrop-filter: blur(8px);
+
+    transition: transform .25s ease;
+
+}
+
+
+.tarjeta:hover {
+
+    transform: translateY(-3px);
+
+}
+
+
+.icono {
+
+    font-size: 18px;
+
+    margin-bottom: 8px;
+
+}
+
+
+.numero {
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 43px;
+
+    line-height: 1;
+
+    margin-bottom: 7px;
+
+}
+
+
+.etiqueta {
+
+    color: var(--suave);
+
+    font-size: 9px;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+}
+
+
+.card-confirmados .numero {
+
+    color: var(--verde);
+
+}
+
+
+.card-personas .numero {
+
+    color: var(--dorado);
+
+}
+
+
+.card-no .numero {
+
+    color: var(--rojo);
+
+}
+
+
+.card-pendientes .numero {
+
+    color: var(--rosa);
+
+}
+
+
+/* =====================================================
+   BLOQUE PRINCIPAL
+===================================================== */
+
+.seccion {
+
+    background: var(--blanco);
+
+    border: 1px solid var(--borde);
+
+    border-radius: 22px;
+
+    padding: 27px;
+
+    box-shadow:
+        0 12px 40px rgba(80,60,50,.055);
+
+    backdrop-filter: blur(8px);
+
+}
+
+
+.titulo {
+
+    text-align: center;
+
+    margin-bottom: 22px;
+
+}
+
+
+.titulo-mini {
+
+    color: var(--dorado);
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+}
+
+
+.titulo h2 {
+
+    margin: 6px 0 0;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 35px;
+
+    font-weight: 500;
+
+}
+
+
+/* =====================================================
+   BARRA SUPERIOR
+===================================================== */
+
+.controles {
+
+    display: flex;
+
+    justify-content: center;
+
+    margin-bottom: 22px;
+
+}
+
+
+.boton {
+
+    border: 1px solid var(--rosa);
+
+    background: transparent;
+
+    color: var(--texto);
+
+    border-radius: 30px;
+
+    padding: 11px 23px;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition: .25s ease;
+
+}
+
+
+.boton:hover {
+
+    background: var(--rosa-claro);
+
+}
+
+
+.boton:disabled {
+
+    opacity: .55;
+
+    cursor: wait;
+
+}
+
+
+/* =====================================================
+   ESTADO DE CONEXIÓN
+===================================================== */
+
+.conexion {
+
+    text-align: center;
+
+    margin-bottom: 18px;
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+
+    color: var(--suave);
+
+}
+
+
+.punto {
+
+    display: inline-block;
+
+    width: 7px;
+
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: var(--dorado);
+
+    margin-right: 6px;
+
+}
+
+
+.punto.ok {
+
+    background: var(--verde);
+
+}
+
+
+.punto.error {
+
+    background: var(--rojo);
+
+}
+
+
+/* =====================================================
+   TABLA
+===================================================== */
+
+.tabla-wrapper {
+
+    overflow-x: auto;
+
+}
+
+
+table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+}
+
+
+thead th {
+
+    padding: 13px 10px;
+
+    border-bottom: 1px solid var(--borde);
+
+    color: var(--suave);
+
+    font-size: 9px;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+    font-weight: 500;
+
+    text-align: left;
+
+}
+
+
+tbody td {
+
+    padding: 15px 10px;
+
+    border-bottom: 1px solid rgba(120,100,90,.08);
+
+    font-size: 13px;
+
+}
+
+
+tbody tr:last-child td {
+
+    border-bottom: none;
+
+}
+
+
+.nombre {
+
+    font-weight: 500;
+
+}
+
+
+/* =====================================================
+   ESTADOS
+===================================================== */
+
+.estado {
+
+    display: inline-block;
+
+    padding: 6px 12px;
+
+    border-radius: 30px;
+
+    font-size: 9px;
+
+    letter-spacing: .5px;
+
+    text-transform: uppercase;
+
+}
+
+
+.estado-confirmado {
+
+    color: #5d7d68;
+
+    background: var(--verde-claro);
+
+}
+
+
+.estado-no {
+
+    color: #9a6262;
+
+    background: var(--rojo-claro);
+
+}
+
+
+.estado-pendiente {
+
+    color: #9a7d4e;
+
+    background: #eee5d2;
+
+}
+
+
+/* =====================================================
+   MENSAJE
+===================================================== */
+
+.mensaje {
+
+    padding: 35px 20px;
+
+    text-align: center;
+
+    color: var(--suave);
+
+    font-size: 13px;
+
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer {
+
+    text-align: center;
+
+    margin-top: 25px;
+
+    color: var(--suave);
+
+    font-size: 9px;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+.footer span {
+
+    color: var(--dorado);
+
+}
+
+
+/* =====================================================
+   CELULAR
+===================================================== */
+
+@media (max-width: 750px) {
+
+    .contenedor {
+
+        width: 94%;
+
+        padding-top: 30px;
+
+    }
+
+
+    .resumen {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 10px;
+
+    }
+
+
+    .tarjeta {
+
+        padding: 18px 10px;
+
+    }
+
+
+    .seccion {
+
+        padding: 18px;
+
+    }
+
+
+    thead th,
+    tbody td {
+
+        white-space: nowrap;
+
+    }
+
+}
+
+
+@media (max-width: 430px) {
+
+    h1 {
+
+        font-size: 46px;
+
+    }
+
+
+    .numero {
+
+        font-size: 36px;
+
+    }
+
+
+    .titulo h2 {
+
+        font-size: 30px;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="contenedor">
+
+
+    <!-- =================================================
+         ENCABEZADO
+    ================================================== -->
+
+    <header class="encabezado">
+
+        <div class="marca">
+            NOVA INVITE PRESENTA
+        </div>
+
+
+        <h1>
+            Tamy & Thiago
+        </h1>
+
+
+        <div class="decoracion">
+            <span>✦</span>
+        </div>
+
+
+        <div class="subtitulo">
+            Panel de organización
+        </div>
+
+    </header>
+
+
+    <!-- =================================================
+         RESUMEN
+    ================================================== -->
+
+    <section class="resumen">
+
+
+        <div class="tarjeta card-confirmados">
+
+            <div class="icono">
+                ♡
+            </div>
+
+            <div
+                class="numero"
+                id="confirmados">
+
+                0
+
+            </div>
+
+            <div class="etiqueta">
+                Confirmados
+            </div>
+
+        </div>
+
+
+        <div class="tarjeta card-personas">
+
+            <div class="icono">
+                ♡
+            </div>
+
+            <div
+                class="numero"
+                id="personas">
+
+                0
+
+            </div>
+
+            <div class="etiqueta">
+                Personas
+            </div>
+
+        </div>
+
+
+        <div class="tarjeta card-no">
+
+            <div class="icono">
+                ×
+            </div>
+
+            <div
+                class="numero"
+                id="no">
+
+                0
+
+            </div>
+
+            <div class="etiqueta">
+                No asisten
+            </div>
+
+        </div>
+
+
+        <div class="tarjeta card-pendientes">
+
+            <div class="icono">
+                ◌
+            </div>
+
+            <div
+                class="numero"
+                id="pendientes">
+
+                0
+
+            </div>
+
+            <div class="etiqueta">
+                Pendientes
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+    <!-- =================================================
+         LISTA
+    ================================================== -->
+
+    <section class="seccion">
+
+
+        <div class="titulo">
+
+            <div class="titulo-mini">
+                Respuestas recibidas
+            </div>
+
+            <h2>
+                Lista de invitados
+            </h2>
+
+        </div>
+
+
+        <div class="conexion">
+
+            <span
+                class="punto"
+                id="punto">
+            </span>
+
+            <span id="conexionTexto">
+                Conectando con el panel...
+            </span>
+
+        </div>
+
+
+        <div class="controles">
+
+            <button
+                class="boton"
+                id="botonActualizar"
+                onclick="cargarDatos()">
+
+                ↻ &nbsp; Actualizar respuestas
+
+            </button>
+
+        </div>
+
+
+        <div class="tabla-wrapper">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            Invitado
+                        </th>
+
+                        <th>
+                            Personas
+                        </th>
+
+                        <th>
+                            Estado
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody id="lista">
+
+                    <tr>
+
+                        <td
+                            colspan="3"
+                            class="mensaje">
+
+                            Cargando respuestas...
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+    </section>
+
+
+    <div class="footer">
+
+        El secreto está en el aire
+        <span>✦</span>
+        Tamy & Thiago
+
+    </div>
+
+
+</div>
+
+
+<script>
+
+/* =====================================================
+   CONEXIÓN CON TU APPS SCRIPT
+===================================================== */
+
+const SCRIPT_URL =
+"https://script.google.com/macros/s/AKfycbzjrfUcgu0RafzyAqLHOs7UbPneYO492QBNw7lETNyadxrtTcTYRO_SZGBom_k9ZZEM/exec";
+
+
+/* =====================================================
+   CARGAR DATOS
+===================================================== */
+
+async function cargarDatos() {
+
+
+    const boton =
+        document.getElementById(
+            "botonActualizar"
+        );
+
+
+    const lista =
+        document.getElementById(
+            "lista"
+        );
+
+
+    const punto =
+        document.getElementById(
+            "punto"
+        );
+
+
+    const conexionTexto =
+        document.getElementById(
+            "conexionTexto"
+        );
+
+
+    boton.disabled = true;
+
+    conexionTexto.textContent =
+        "Actualizando...";
+
+    punto.className =
+        "punto";
+
+
+    try {
+
+
+        const respuesta =
+            await fetch(
+
+                SCRIPT_URL +
+                "?action=getInvitados"
+
+            );
+
+
+        if (!respuesta.ok) {
+
+            throw new Error(
+                "No se pudo conectar"
+            );
+
+        }
+
+
+        const datos =
+            await respuesta.json();
+
+
+        mostrarDatos(datos);
+
+
+        punto.className =
+            "punto ok";
+
+
+        conexionTexto.textContent =
+            "Conectado · actualizado ahora";
+
+
+    }
+
+
+    catch (error) {
+
+
+        console.error(
+            "Error:",
+            error
+        );
+
+
+        punto.className =
+            "punto error";
+
+
+        conexionTexto.textContent =
+            "No se pudo conectar con las respuestas";
+
+
+        lista.innerHTML = `
+
+            <tr>
+
+                <td
+                    colspan="3"
+                    class="mensaje">
+
+                    No se pudieron cargar
+                    las respuestas.
+
+                    <br><br>
+
+                    Si es la primera vez que abrís
+                    el panel, puede ser necesario
+                    revisar la conexión del navegador.
+
+                </td>
+
+            </tr>
+
+        `;
+
+    }
+
+
+    finally {
+
+        boton.disabled = false;
+
+    }
+
+}
+
+
+/* =====================================================
+   MOSTRAR DATOS
+===================================================== */
+
+function mostrarDatos(datos) {
+
+
+    let confirmados = 0;
+
+    let personas = 0;
+
+    let noAsisten = 0;
+
+    let pendientes = 0;
+
+
+    const lista =
+        document.getElementById(
+            "lista"
+        );
+
+
+    lista.innerHTML = "";
+
+
+    if (
+        !Array.isArray(datos)
+    ) {
+
+        datos = [];
+
+    }
+
+
+    datos.forEach(
+        function(invitado) {
+
+
+            const estado =
+                String(
+                    invitado.estado || ""
+                )
+                .toLowerCase()
+                .trim();
+
+
+            const cantidad =
+                Number(
+                    invitado.personas
+                ) || 0;
+
+
+            /* CONFIRMADOS */
+
+            if (
+                estado === "confirmado"
+            ) {
+
+                confirmados++;
+
+                personas += cantidad;
+
+            }
+
+
+            /* NO ASISTE */
+
+            else if (
+
+                estado === "no" ||
+
+                estado === "no asiste" ||
+
+                estado === "no voy"
+
+            ) {
+
+                noAsisten++;
+
+            }
+
+
+            /* OTROS */
+
+            else {
+
+                pendientes++;
+
+            }
+
+
+            let claseEstado =
+                "estado-pendiente";
+
+
+            let textoEstado =
+                "Pendiente";
+
+
+            if (
+                estado === "confirmado"
+            ) {
+
+                claseEstado =
+                    "estado-confirmado";
+
+                textoEstado =
+                    "Confirmado";
+
+            }
+
+
+            else if (
+
+                estado === "no" ||
+
+                estado === "no asiste" ||
+
+                estado === "no voy"
+
+            ) {
+
+                claseEstado =
+                    "estado-no";
+
+                textoEstado =
+                    "No asiste";
+
+            }
+
+
+            /* FILA */
+
+            const fila =
+                document.createElement(
+                    "tr"
+                );
+
+
+            /* NOMBRE */
+
+            const celdaNombre =
+                document.createElement(
+                    "td"
+                );
+
+
+            celdaNombre.className =
+                "nombre";
+
+
+            celdaNombre.textContent =
+                invitado.nombre || "";
+
+
+            /* PERSONAS */
+
+            const celdaPersonas =
+                document.createElement(
+                    "td"
+                );
+
+
+            celdaPersonas.textContent =
+                cantidad;
+
+
+            /* ESTADO */
+
+            const celdaEstado =
+                document.createElement(
+                    "td"
+                );
+
+
+            const etiqueta =
+                document.createElement(
+                    "span"
+                );
+
+
+            etiqueta.className =
+                "estado " +
+                claseEstado;
+
+
+            etiqueta.textContent =
+                textoEstado;
+
+
+            celdaEstado.appendChild(
+                etiqueta
+            );
+
+
+            /* ARMAR FILA */
+
+            fila.appendChild(
+                celdaNombre
+            );
+
+
+            fila.appendChild(
+                celdaPersonas
+            );
+
+
+            fila.appendChild(
+                celdaEstado
+            );
+
+
+            lista.appendChild(
+                fila
+            );
+
+        }
+    );
+
+
+    /* =================================================
+       ACTUALIZAR NÚMEROS
+    ================================================== */
+
+    document.getElementById(
+        "confirmados"
+    ).textContent =
+        confirmados;
+
+
+    document.getElementById(
+        "personas"
+    ).textContent =
+        personas;
+
+
+    document.getElementById(
+        "no"
+    ).textContent =
+        noAsisten;
+
+
+    document.getElementById(
+        "pendientes"
+    ).textContent =
+        pendientes;
+
+
+    /* SIN RESPUESTAS */
+
+    if (
+        datos.length === 0
+    ) {
+
+        lista.innerHTML = `
+
+            <tr>
+
+                <td
+                    colspan="3"
+                    class="mensaje">
+
+                    Todavía no hay respuestas.
+
+                </td>
+
+            </tr>
+
+        `;
+
+    }
+
+}
+
+
+/* =====================================================
+   CARGA INICIAL
+===================================================== */
+
+cargarDatos();
+
+
+/* =====================================================
+   ACTUALIZAR AUTOMÁTICAMENTE
+===================================================== */
+
+setInterval(
+    cargarDatos,
+    30000
+);
+
+</script>
+
+
+</body>
+
+</html>

@@ -1,19 +1,27 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
 
 <title>Tamy & Thiago | Panel</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
 
 <style>
 
 :root{
+
     --fondo:#f8f3ee;
     --blanco:#fffdfb;
     --texto:#4d4141;
@@ -24,508 +32,767 @@
     --borde:#eadfda;
     --verde:#809b86;
     --rojo:#b97d7d;
-    --sombra:0 15px 45px rgba(91,65,65,.08);
+
+    --sombra:
+        0 15px 45px rgba(91,65,65,.08);
+
 }
+
 
 *{
     box-sizing:border-box;
 }
 
+
 body{
+
     margin:0;
+
     background:
-        radial-gradient(circle at top left, rgba(234,219,221,.45), transparent 30%),
-        radial-gradient(circle at bottom right, rgba(232,221,207,.35), transparent 30%),
+
+        radial-gradient(
+            circle at top left,
+            rgba(234,219,221,.45),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at bottom right,
+            rgba(232,221,207,.35),
+            transparent 30%
+        ),
+
         var(--fondo);
+
     color:var(--texto);
+
     font-family:'Montserrat',sans-serif;
+
     min-height:100vh;
+
 }
 
-/* =====================================================
-   ENCABEZADO
-===================================================== */
 
 header{
+
     text-align:center;
-    padding:48px 20px 30px;
+
+    padding:
+        48px
+        20px
+        30px;
+
 }
+
 
 .presenta{
+
     font-size:10px;
+
     letter-spacing:4px;
+
     text-transform:uppercase;
+
     color:var(--dorado);
+
     margin-bottom:12px;
+
 }
+
 
 h1{
-    font-family:'Cormorant Garamond',serif;
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
     font-size:52px;
+
     line-height:1;
+
     margin:0;
+
     font-weight:600;
-    color:#4d4141;
+
 }
+
 
 .estrella{
+
     color:var(--dorado);
+
     font-size:18px;
+
     margin:13px 0 10px;
+
 }
+
 
 .subtitulo{
+
     font-size:11px;
+
     letter-spacing:3px;
+
     text-transform:uppercase;
+
     color:var(--suave);
+
 }
 
-/* =====================================================
-   CONTENEDOR
-===================================================== */
 
 .contenedor{
-    width:min(1100px, calc(100% - 30px));
+
+    width:
+        min(
+            1100px,
+            calc(100% - 30px)
+        );
+
     margin:auto;
+
     padding-bottom:50px;
+
 }
 
-/* =====================================================
-   TARJETAS
-===================================================== */
 
 .resumen{
+
     display:grid;
-    grid-template-columns:repeat(4,1fr);
+
+    grid-template-columns:
+        repeat(4,1fr);
+
     gap:15px;
+
     margin-bottom:30px;
+
 }
+
 
 .card{
-    background:rgba(255,253,251,.92);
-    border:1px solid var(--borde);
+
+    background:
+        rgba(255,253,251,.92);
+
+    border:
+        1px solid var(--borde);
+
     border-radius:20px;
+
     padding:24px 15px;
+
     text-align:center;
+
     box-shadow:var(--sombra);
+
 }
+
 
 .card-icon{
+
     font-size:18px;
+
     margin-bottom:7px;
+
 }
+
 
 .card-numero{
-    font-family:'Cormorant Garamond',serif;
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
     font-size:40px;
+
     line-height:1;
+
     color:var(--rosa);
+
     margin-bottom:6px;
+
 }
+
 
 .card-titulo{
+
     font-size:10px;
+
     letter-spacing:1.5px;
+
     text-transform:uppercase;
+
     color:var(--suave);
+
 }
 
-/* =====================================================
-   CABECERA DE LISTA
-===================================================== */
 
 .lista-header{
+
     display:flex;
+
     align-items:center;
+
     justify-content:space-between;
+
     gap:15px;
+
     margin-bottom:15px;
+
 }
+
 
 .lista-titulo{
-    font-family:'Cormorant Garamond',serif;
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
     font-size:31px;
+
     margin:0;
+
     font-weight:600;
+
 }
+
 
 .lista-subtitulo{
+
     font-size:10px;
+
     color:var(--suave);
+
     margin-top:3px;
-    letter-spacing:.5px;
+
 }
+
 
 .btn-actualizar{
-    border:1px solid var(--borde);
+
+    border:
+        1px solid var(--borde);
+
     background:var(--blanco);
+
     color:var(--texto);
-    padding:11px 16px;
+
+    padding:
+        11px
+        16px;
+
     border-radius:30px;
+
     cursor:pointer;
-    font-family:'Montserrat',sans-serif;
+
+    font-family:
+        'Montserrat',
+        sans-serif;
+
     font-size:11px;
-    transition:.2s;
+
 }
+
 
 .btn-actualizar:hover{
-    background:var(--rosa-claro);
+
+    background:
+        var(--rosa-claro);
+
 }
 
-/* =====================================================
-   TABLA
-===================================================== */
 
 .tabla-box{
-    background:rgba(255,253,251,.95);
-    border:1px solid var(--borde);
+
+    background:
+        rgba(255,253,251,.95);
+
+    border:
+        1px solid var(--borde);
+
     border-radius:22px;
+
     box-shadow:var(--sombra);
+
     overflow:hidden;
+
 }
+
 
 .tabla-scroll{
+
     overflow-x:auto;
+
 }
+
 
 table{
+
     width:100%;
+
     border-collapse:collapse;
-    min-width:700px;
+
+    min-width:760px;
+
 }
+
 
 thead{
+
     background:#f6efeb;
+
 }
+
 
 th{
-    padding:17px 18px;
+
+    padding:
+        17px
+        18px;
+
     text-align:left;
+
     font-size:9px;
+
     letter-spacing:1.5px;
+
     text-transform:uppercase;
+
     color:var(--suave);
-    font-weight:600;
+
 }
+
 
 td{
-    padding:17px 18px;
-    border-top:1px solid #eee5e1;
+
+    padding:
+        17px
+        18px;
+
+    border-top:
+        1px solid #eee5e1;
+
     font-size:12px;
-    color:var(--texto);
+
 }
+
 
 .nombre{
+
     font-weight:600;
+
 }
+
 
 .fecha{
+
     font-size:10px;
+
     color:#9b8c8c;
+
 }
 
-/* =====================================================
-   ESTADOS
-===================================================== */
 
 .estado{
+
     display:inline-flex;
+
     align-items:center;
-    gap:6px;
-    padding:7px 11px;
+
+    padding:
+        7px
+        11px;
+
     border-radius:20px;
+
     font-size:9px;
+
     text-transform:uppercase;
+
     letter-spacing:.7px;
+
     font-weight:600;
+
 }
+
 
 .estado.confirmado{
+
     background:#edf4ee;
+
     color:#69816e;
+
 }
+
 
 .estado.no{
+
     background:#f7eded;
+
     color:#a26e6e;
+
 }
+
 
 .estado.pendiente{
+
     background:#f4f0e8;
+
     color:#927f60;
+
 }
 
-/* =====================================================
-   BOTONES
-===================================================== */
 
 .acciones{
+
     display:flex;
+
     gap:7px;
+
 }
+
 
 .btn-accion{
+
     width:35px;
+
     height:35px;
+
     border-radius:50%;
-    border:1px solid var(--borde);
+
+    border:
+        1px solid var(--borde);
+
     background:white;
+
     cursor:pointer;
-    font-size:15px;
+
     display:flex;
+
     align-items:center;
+
     justify-content:center;
-    transition:.2s;
+
+    font-size:15px;
+
 }
 
-.btn-editar:hover{
-    background:#f2e5e7;
-    border-color:#d9bdc1;
+
+.btn-accion:hover{
+
+    background:
+        var(--rosa-claro);
+
 }
 
-.btn-eliminar:hover{
-    background:#f6e4e4;
-    border-color:#dfbbbb;
-}
-
-/* =====================================================
-   MENSAJES
-===================================================== */
 
 .estado-conexion{
+
     text-align:center;
+
     font-size:10px;
+
     color:var(--suave);
-    padding:18px 10px 0;
+
+    padding-top:18px;
+
 }
+
 
 .cargando{
+
     text-align:center;
-    padding:45px 20px;
+
+    padding:45px;
+
     color:var(--suave);
+
     font-size:12px;
+
 }
+
 
 .error{
+
     text-align:center;
-    padding:35px 20px;
+
+    padding:35px;
+
     color:#a26e6e;
+
     font-size:12px;
+
 }
 
-/* =====================================================
-   MODAL
-===================================================== */
 
 .modal-fondo{
+
     position:fixed;
+
     inset:0;
-    background:rgba(62,47,47,.35);
-    backdrop-filter:blur(5px);
+
+    background:
+        rgba(62,47,47,.35);
+
+    backdrop-filter:
+        blur(5px);
+
     display:none;
+
     align-items:center;
+
     justify-content:center;
+
     padding:20px;
+
     z-index:1000;
+
 }
+
 
 .modal-fondo.activo{
+
     display:flex;
+
 }
+
 
 .modal{
-    width:min(440px,100%);
+
+    width:
+        min(
+            440px,
+            100%
+        );
+
     background:#fffdfb;
-    border:1px solid var(--borde);
+
+    border:
+        1px solid var(--borde);
+
     border-radius:25px;
-    box-shadow:0 25px 80px rgba(55,40,40,.2);
+
+    box-shadow:
+        0 25px 80px
+        rgba(55,40,40,.2);
+
     padding:30px;
-    animation:entrada .2s ease;
+
 }
 
-@keyframes entrada{
-    from{
-        opacity:0;
-        transform:translateY(10px) scale(.98);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0) scale(1);
-    }
-}
 
 .modal-icon{
+
     text-align:center;
+
     color:var(--dorado);
-    margin-bottom:5px;
+
 }
+
 
 .modal h2{
-    font-family:'Cormorant Garamond',serif;
+
+    font-family:
+        'Cormorant Garamond',
+        serif;
+
     font-size:32px;
+
     text-align:center;
-    margin:0 0 6px;
+
+    margin:
+        0
+        0
+        6px;
+
 }
+
 
 .modal p{
+
     text-align:center;
+
     color:var(--suave);
+
     font-size:11px;
-    margin:0 0 22px;
+
+    margin:
+        0
+        0
+        22px;
+
 }
+
 
 .form-grupo{
+
     margin-bottom:15px;
+
 }
 
+
 .form-grupo label{
+
     display:block;
+
     font-size:9px;
+
     text-transform:uppercase;
+
     letter-spacing:1px;
+
     color:var(--suave);
+
     margin-bottom:7px;
+
 }
+
 
 .form-grupo input,
 .form-grupo select{
+
     width:100%;
-    border:1px solid var(--borde);
-    background:#fff;
+
+    border:
+        1px solid var(--borde);
+
+    background:white;
+
     border-radius:12px;
-    padding:12px 13px;
+
+    padding:12px;
+
     outline:none;
-    font-family:'Montserrat',sans-serif;
-    color:var(--texto);
-    font-size:12px;
+
+    font-family:
+        'Montserrat',
+        sans-serif;
+
 }
 
-.form-grupo input:focus,
-.form-grupo select:focus{
-    border-color:var(--rosa);
-}
 
 .modal-botones{
+
     display:flex;
+
     gap:10px;
+
     margin-top:22px;
+
 }
+
 
 .btn-cancelar,
-.btn-guardar{
+.btn-guardar,
+.btn-eliminar-confirmar{
+
     flex:1;
+
     border-radius:30px;
+
     padding:12px;
+
     cursor:pointer;
-    font-family:'Montserrat',sans-serif;
+
+    font-family:
+        'Montserrat',
+        sans-serif;
+
     font-size:11px;
+
 }
+
 
 .btn-cancelar{
+
     background:white;
-    border:1px solid var(--borde);
-    color:var(--texto);
+
+    border:
+        1px solid var(--borde);
+
 }
+
 
 .btn-guardar{
+
     background:var(--rosa);
-    border:1px solid var(--rosa);
+
     color:white;
+
+    border:0;
+
 }
 
-/* =====================================================
-   MODAL ELIMINAR
-===================================================== */
-
-.modal.eliminar-modal{
-    text-align:center;
-}
-
-.icono-eliminar{
-    font-size:30px;
-    margin-bottom:5px;
-}
 
 .btn-eliminar-confirmar{
-    flex:1;
-    border:0;
-    border-radius:30px;
-    padding:12px;
-    cursor:pointer;
+
     background:#b97d7d;
+
     color:white;
-    font-family:'Montserrat',sans-serif;
-    font-size:11px;
+
+    border:0;
+
 }
 
-/* =====================================================
-   FOOTER
-===================================================== */
 
 footer{
+
     text-align:center;
-    padding:0 20px 35px;
+
+    padding:
+        0
+        20px
+        35px;
+
     color:#a79898;
+
     font-size:9px;
+
     letter-spacing:1px;
+
 }
 
-/* =====================================================
-   RESPONSIVE
-===================================================== */
 
 @media(max-width:750px){
 
-    header{
-        padding-top:35px;
-    }
-
-    h1{
-        font-size:44px;
-    }
-
     .resumen{
-        grid-template-columns:repeat(2,1fr);
+
+        grid-template-columns:
+            repeat(2,1fr);
+
     }
 
     .lista-header{
-        align-items:flex-start;
+
         flex-direction:column;
+
+        align-items:flex-start;
+
     }
 
     .btn-actualizar{
+
         width:100%;
+
     }
 
-    .contenedor{
-        width:min(100% - 20px,1100px);
+    h1{
+
+        font-size:44px;
+
     }
+
 }
 
-@media(max-width:430px){
-
-    .card{
-        padding:20px 10px;
-    }
-
-    .card-numero{
-        font-size:34px;
-    }
-
-    .lista-titulo{
-        font-size:28px;
-    }
-
-    .modal{
-        padding:25px 20px;
-    }
-}
 
 </style>
+
 </head>
 
+
 <body>
+
 
 <header>
 
@@ -533,9 +800,13 @@ footer{
         Nova Invite presenta
     </div>
 
-    <h1>Tamy & Thiago</h1>
+    <h1>
+        Tamy & Thiago
+    </h1>
 
-    <div class="estrella">✦</div>
+    <div class="estrella">
+        ✦
+    </div>
 
     <div class="subtitulo">
         Panel de asistencia
@@ -546,253 +817,363 @@ footer{
 
 <main class="contenedor">
 
-    <!-- =================================================
-         RESUMEN
-    ================================================== -->
 
-    <section class="resumen">
-
-        <div class="card">
-            <div class="card-icon">♡</div>
-            <div class="card-numero" id="confirmados">0</div>
-            <div class="card-titulo">Confirmados</div>
-        </div>
-
-        <div class="card">
-            <div class="card-icon">♡</div>
-            <div class="card-numero" id="personas">0</div>
-            <div class="card-titulo">Personas</div>
-        </div>
-
-        <div class="card">
-            <div class="card-icon">×</div>
-            <div class="card-numero" id="noAsisten">0</div>
-            <div class="card-titulo">No asisten</div>
-        </div>
-
-        <div class="card">
-            <div class="card-icon">◌</div>
-            <div class="card-numero" id="pendientes">0</div>
-            <div class="card-titulo">Pendientes</div>
-        </div>
-
-    </section>
+<section class="resumen">
 
 
-    <!-- =================================================
-         LISTA
-    ================================================== -->
+<div class="card">
 
-    <section>
+    <div class="card-icon">
+        ♡
+    </div>
 
-        <div class="lista-header">
+    <div
+        class="card-numero"
+        id="confirmados">
+        0
+    </div>
 
-            <div>
-                <h2 class="lista-titulo">
-                    Respuestas
-                </h2>
+    <div class="card-titulo">
+        Confirmados
+    </div>
 
-                <div class="lista-subtitulo">
-                    Lista de invitados
-                </div>
-            </div>
-
-            <button
-                class="btn-actualizar"
-                onclick="cargarInvitados()">
-                ↻ &nbsp; Actualizar respuestas
-            </button>
-
-        </div>
+</div>
 
 
-        <div class="tabla-box">
+<div class="card">
 
-            <div class="tabla-scroll">
+    <div class="card-icon">
+        ♡
+    </div>
 
-                <table>
+    <div
+        class="card-numero"
+        id="personas">
+        0
+    </div>
 
-                    <thead>
+    <div class="card-titulo">
+        Personas
+    </div>
 
-                        <tr>
-                            <th>Invitado</th>
-                            <th>Personas</th>
-                            <th>Estado</th>
-                            <th>Fecha</th>
-                            <th>Acciones</th>
-                        </tr>
+</div>
 
-                    </thead>
 
-                    <tbody id="tablaInvitados">
+<div class="card">
 
-                        <tr>
-                            <td colspan="5">
-                                <div class="cargando">
-                                    Cargando respuestas...
-                                </div>
-                            </td>
-                        </tr>
+    <div class="card-icon">
+        ×
+    </div>
 
-                    </tbody>
+    <div
+        class="card-numero"
+        id="noAsisten">
+        0
+    </div>
 
-                </table>
+    <div class="card-titulo">
+        No asisten
+    </div>
 
-            </div>
+</div>
 
-        </div>
 
-        <div
-            class="estado-conexion"
-            id="conexion">
-            Conectando...
-        </div>
+<div class="card">
 
-    </section>
+    <div class="card-icon">
+        ◌
+    </div>
+
+    <div
+        class="card-numero"
+        id="pendientes">
+        0
+    </div>
+
+    <div class="card-titulo">
+        Pendientes
+    </div>
+
+</div>
+
+
+</section>
+
+
+<section>
+
+
+<div class="lista-header">
+
+<div>
+
+    <h2 class="lista-titulo">
+        Respuestas
+    </h2>
+
+    <div class="lista-subtitulo">
+        Lista de invitados
+    </div>
+
+</div>
+
+
+<button
+    class="btn-actualizar"
+    onclick="cargarInvitados()">
+
+    ↻ &nbsp;
+    Actualizar respuestas
+
+</button>
+
+</div>
+
+
+<div class="tabla-box">
+
+<div class="tabla-scroll">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>
+    Invitado
+</th>
+
+<th>
+    Personas
+</th>
+
+<th>
+    Estado
+</th>
+
+<th>
+    Fecha
+</th>
+
+<th>
+    Acciones
+</th>
+
+</tr>
+
+</thead>
+
+
+<tbody id="tablaInvitados">
+
+<tr>
+
+<td colspan="5">
+
+<div class="cargando">
+    Cargando respuestas...
+</div>
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+
+<div
+    class="estado-conexion"
+    id="conexion">
+
+    Conectando...
+
+</div>
+
+
+</section>
+
 
 </main>
 
 
 <footer>
+
     Tamy & Thiago · Panel de asistencia
+
 </footer>
 
 
-<!-- =====================================================
+<!-- ==================================================
      MODAL EDITAR
-====================================================== -->
+=================================================== -->
 
 <div
     class="modal-fondo"
     id="modalEditar">
 
-    <div class="modal">
+<div class="modal">
 
-        <div class="modal-icon">
-            ✦
-        </div>
+<div class="modal-icon">
+    ✦
+</div>
 
-        <h2>Editar invitado</h2>
+<h2>
+    Editar invitado
+</h2>
 
-        <p>
-            Modificá los datos de la respuesta.
-        </p>
-
-        <div class="form-grupo">
-
-            <label>
-                Nombre
-            </label>
-
-            <input
-                type="text"
-                id="editarNombre"
-                autocomplete="off">
-
-        </div>
+<p>
+    Modificá los datos de la respuesta.
+</p>
 
 
-        <div class="form-grupo">
+<div class="form-grupo">
 
-            <label>
-                Cantidad de personas
-            </label>
+<label>
+    Nombre
+</label>
 
-            <input
-                type="number"
-                id="editarPersonas"
-                min="0"
-                max="99">
-
-        </div>
-
-
-        <div class="form-grupo">
-
-            <label>
-                Estado
-            </label>
-
-            <select id="editarEstado">
-
-                <option value="confirmado">
-                    Confirmado
-                </option>
-
-                <option value="no">
-                    No asiste
-                </option>
-
-                <option value="pendiente">
-                    Pendiente
-                </option>
-
-            </select>
-
-        </div>
-
-
-        <div class="modal-botones">
-
-            <button
-                class="btn-cancelar"
-                onclick="cerrarEditar()">
-                Cancelar
-            </button>
-
-            <button
-                class="btn-guardar"
-                onclick="guardarEdicion()">
-                Guardar cambios
-            </button>
-
-        </div>
-
-    </div>
+<input
+    id="editarNombre"
+    type="text">
 
 </div>
 
 
-<!-- =====================================================
+<div class="form-grupo">
+
+<label>
+    Personas
+</label>
+
+<input
+    id="editarPersonas"
+    type="number"
+    min="0">
+
+</div>
+
+
+<div class="form-grupo">
+
+<label>
+    Estado
+</label>
+
+<select id="editarEstado">
+
+<option value="confirmado">
+    Confirmado
+</option>
+
+<option value="no">
+    No asiste
+</option>
+
+<option value="pendiente">
+    Pendiente
+</option>
+
+</select>
+
+</div>
+
+
+<div class="modal-botones">
+
+<button
+    class="btn-cancelar"
+    onclick="cerrarEditar()">
+
+    Cancelar
+
+</button>
+
+
+<button
+    class="btn-guardar"
+    onclick="guardarEdicion()">
+
+    Guardar cambios
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- ==================================================
      MODAL ELIMINAR
-====================================================== -->
+=================================================== -->
 
 <div
     class="modal-fondo"
     id="modalEliminar">
 
-    <div class="modal eliminar-modal">
+<div class="modal">
 
-        <div class="icono-eliminar">
-            ♡
-        </div>
+<div class="modal-icon">
+    ♡
+</div>
 
-        <h2>Eliminar invitado</h2>
+<h2>
+    Eliminar invitado
+</h2>
 
-        <p id="textoEliminar">
-            ¿Querés eliminar esta respuesta?
-        </p>
+<p id="textoEliminar">
+    ¿Querés eliminar esta respuesta?
+</p>
 
 
-        <div class="modal-botones">
+<div class="modal-botones">
 
-            <button
-                class="btn-cancelar"
-                onclick="cerrarEliminar()">
-                Cancelar
-            </button>
+<button
+    class="btn-cancelar"
+    onclick="cerrarEliminar()">
 
-            <button
-                class="btn-eliminar-confirmar"
-                onclick="confirmarEliminar()">
-                Eliminar
-            </button>
+    Cancelar
 
-        </div>
+</button>
 
-    </div>
+
+<button
+    class="btn-eliminar-confirmar"
+    onclick="confirmarEliminar()">
+
+    Eliminar
+
+</button>
 
 </div>
+
+</div>
+
+</div>
+
+
+<!-- ==================================================
+     IFRAME INVISIBLE PARA POST
+=================================================== -->
+
+<iframe
+    name="envioOculto"
+    id="envioOculto"
+    style="
+        display:none;
+        width:0;
+        height:0;
+        border:0;
+    ">
+</iframe>
 
 
 <script>
@@ -806,21 +1187,28 @@ const SCRIPT_URL =
 
 
 let invitados = [];
+
 let filaEditar = null;
+
 let filaEliminar = null;
 
 
 /* =====================================================
-   CARGAR INVITADOS
+   CARGAR MEDIANTE JSONP
 ===================================================== */
 
-async function cargarInvitados(){
+function cargarInvitados(){
 
     const tabla =
-        document.getElementById("tablaInvitados");
+        document.getElementById(
+            "tablaInvitados"
+        );
 
     const conexion =
-        document.getElementById("conexion");
+        document.getElementById(
+            "conexion"
+        );
+
 
     tabla.innerHTML = `
         <tr>
@@ -832,57 +1220,134 @@ async function cargarInvitados(){
         </tr>
     `;
 
+
     conexion.textContent =
         "Conectando...";
 
-    try{
 
-        const respuesta =
-            await fetch(
-                SCRIPT_URL + "?action=getInvitados&_=" + Date.now()
-            );
+    const nombreCallback =
+        "recibirInvitados_" +
+        Date.now();
 
-        if(!respuesta.ok){
-            throw new Error(
-                "Error HTTP " + respuesta.status
-            );
-        }
 
-        const datos =
-            await respuesta.json();
+    window[nombreCallback] =
+        function(datos){
 
-        if(!Array.isArray(datos)){
-            throw new Error(
-                "La respuesta no es válida"
-            );
-        }
+            try{
 
-        invitados = datos;
+                if(
+                    !Array.isArray(datos)
+                ){
 
-        mostrarInvitados();
+                    throw new Error(
+                        "Respuesta inválida"
+                    );
 
-        conexion.textContent =
-            "Conectado · actualizado ahora";
+                }
 
-    }catch(error){
 
-        console.error(error);
+                invitados = datos;
 
-        tabla.innerHTML = `
-            <tr>
-                <td colspan="5">
-                    <div class="error">
-                        No se pudieron cargar las respuestas.<br>
-                        Tocá "Actualizar respuestas" para intentar nuevamente.
-                    </div>
-                </td>
-            </tr>
-        `;
+                mostrarInvitados();
 
-        conexion.textContent =
-            "No se pudo conectar con el servidor.";
 
-    }
+                conexion.textContent =
+                    "Conectado · actualizado ahora";
+
+
+            }catch(error){
+
+                mostrarError();
+
+            }
+
+
+            delete window[
+                nombreCallback
+            ];
+
+            if(script.parentNode){
+
+                script.parentNode
+                    .removeChild(script);
+
+            }
+
+        };
+
+
+    const script =
+        document.createElement(
+            "script"
+        );
+
+
+    script.src =
+        SCRIPT_URL +
+        "?action=getInvitados" +
+        "&callback=" +
+        nombreCallback +
+        "&_=" +
+        Date.now();
+
+
+    script.onerror =
+        function(){
+
+            mostrarError();
+
+            delete window[
+                nombreCallback
+            ];
+
+            if(script.parentNode){
+
+                script.parentNode
+                    .removeChild(script);
+
+            }
+
+        };
+
+
+    document
+        .body
+        .appendChild(script);
+
+}
+
+
+/* =====================================================
+   ERROR
+===================================================== */
+
+function mostrarError(){
+
+    document.getElementById(
+        "tablaInvitados"
+    ).innerHTML = `
+
+        <tr>
+
+        <td colspan="5">
+
+        <div class="error">
+
+            No se pudieron cargar las respuestas.
+
+        </div>
+
+        </td>
+
+        </tr>
+
+    `;
+
+
+    document.getElementById(
+        "conexion"
+    ).textContent =
+        "Error de conexión";
 
 }
 
@@ -894,115 +1359,168 @@ async function cargarInvitados(){
 function mostrarInvitados(){
 
     const tabla =
-        document.getElementById("tablaInvitados");
+        document.getElementById(
+            "tablaInvitados"
+        );
+
 
     let confirmados = 0;
+
     let personas = 0;
+
     let noAsisten = 0;
+
     let pendientes = 0;
 
 
     if(!invitados.length){
 
         tabla.innerHTML = `
+
             <tr>
-                <td colspan="5">
-                    <div class="cargando">
-                        Todavía no hay respuestas.
-                    </div>
-                </td>
+
+            <td colspan="5">
+
+            <div class="cargando">
+
+                No hay respuestas todavía.
+
+            </div>
+
+            </td>
+
             </tr>
+
         `;
 
     }else{
 
+
         tabla.innerHTML =
-            invitados.map((invitado, indice) => {
+            invitados
+                .map(
+                    function(
+                        invitado,
+                        indice
+                    ){
 
-                const estado =
-                    String(
-                        invitado.estado || "pendiente"
-                    ).toLowerCase();
-
-                if(estado === "confirmado"){
-
-                    confirmados++;
-                    personas +=
-                        Number(invitado.personas) || 0;
-
-                }
-
-                else if(
-                    estado === "no" ||
-                    estado === "no asiste" ||
-                    estado === "no_asiste"
-                ){
-
-                    noAsisten++;
-
-                }
-
-                else{
-
-                    pendientes++;
-
-                }
+                        const estado =
+                            String(
+                                invitado.estado ||
+                                "pendiente"
+                            ).toLowerCase();
 
 
-                let textoEstado =
-                    "Pendiente";
+                        if(
+                            estado ===
+                            "confirmado"
+                        ){
 
-                let claseEstado =
-                    "pendiente";
+                            confirmados++;
+
+                            personas +=
+                                Number(
+                                    invitado.personas
+                                ) || 0;
+
+                        }
+
+                        else if(
+
+                            estado === "no" ||
+
+                            estado ===
+                                "no asiste"
+
+                        ){
+
+                            noAsisten++;
+
+                        }
+
+                        else{
+
+                            pendientes++;
+
+                        }
 
 
-                if(estado === "confirmado"){
+                        let clase =
+                            "pendiente";
 
-                    textoEstado =
-                        "Confirmado";
-
-                    claseEstado =
-                        "confirmado";
-
-                }
-
-                else if(
-                    estado === "no" ||
-                    estado === "no asiste" ||
-                    estado === "no_asiste"
-                ){
-
-                    textoEstado =
-                        "No asiste";
-
-                    claseEstado =
-                        "no";
-
-                }
+                        let texto =
+                            "Pendiente";
 
 
-                return `
+                        if(
+                            estado ===
+                            "confirmado"
+                        ){
 
-                    <tr>
+                            clase =
+                                "confirmado";
+
+                            texto =
+                                "Confirmado";
+
+                        }
+
+
+                        else if(
+
+                            estado === "no" ||
+
+                            estado ===
+                                "no asiste"
+
+                        ){
+
+                            clase =
+                                "no";
+
+                            texto =
+                                "No asiste";
+
+                        }
+
+
+                        return `
+
+                        <tr>
 
                         <td>
 
                             <div class="nombre">
-                                ${escaparHTML(invitado.nombre)}
+
+                                ${
+                                    escaparHTML(
+                                        invitado.nombre
+                                    )
+                                }
+
                             </div>
 
                         </td>
 
 
                         <td>
-                            ${Number(invitado.personas) || 0}
+
+                            ${
+                                Number(
+                                    invitado.personas
+                                ) || 0
+                            }
+
                         </td>
 
 
                         <td>
 
-                            <span class="estado ${claseEstado}">
-                                ${textoEstado}
+                            <span
+                                class="estado ${clase}">
+
+                                ${texto}
+
                             </span>
 
                         </td>
@@ -1011,7 +1529,13 @@ function mostrarInvitados(){
                         <td>
 
                             <div class="fecha">
-                                ${formatearFecha(invitado.fecha)}
+
+                                ${
+                                    formatearFecha(
+                                        invitado.fecha
+                                    )
+                                }
+
                             </div>
 
                         </td>
@@ -1022,43 +1546,68 @@ function mostrarInvitados(){
                             <div class="acciones">
 
                                 <button
-                                    class="btn-accion btn-editar"
-                                    title="Editar"
-                                    onclick="abrirEditar(${indice})">
+                                    class="btn-accion"
+                                    onclick="
+                                        abrirEditar(
+                                            ${indice}
+                                        )
+                                    "
+                                    title="Editar">
+
                                     ✏️
+
                                 </button>
 
 
                                 <button
-                                    class="btn-accion btn-eliminar"
-                                    title="Eliminar"
-                                    onclick="abrirEliminar(${indice})">
+                                    class="btn-accion"
+                                    onclick="
+                                        abrirEliminar(
+                                            ${indice}
+                                        )
+                                    "
+                                    title="Eliminar">
+
                                     🗑️
+
                                 </button>
 
                             </div>
 
                         </td>
 
-                    </tr>
+                        </tr>
 
-                `;
+                        `;
 
-            }).join("");
+                    }
+                )
+                .join("");
 
     }
 
 
-    document.getElementById("confirmados").textContent =
+    document.getElementById(
+        "confirmados"
+    ).textContent =
         confirmados;
 
-    document.getElementById("personas").textContent =
+
+    document.getElementById(
+        "personas"
+    ).textContent =
         personas;
 
-    document.getElementById("noAsisten").textContent =
+
+    document.getElementById(
+        "noAsisten"
+    ).textContent =
         noAsisten;
 
-    document.getElementById("pendientes").textContent =
+
+    document.getElementById(
+        "pendientes"
+    ).textContent =
         pendientes;
 
 }
@@ -1073,24 +1622,40 @@ function abrirEditar(indice){
     const invitado =
         invitados[indice];
 
+
     if(!invitado) return;
 
+
     filaEditar =
-        invitado.fila;
+        Number(invitado.fila);
 
 
-    document.getElementById("editarNombre").value =
+    document.getElementById(
+        "editarNombre"
+    ).value =
         invitado.nombre || "";
 
-    document.getElementById("editarPersonas").value =
-        Number(invitado.personas) || 0;
 
-    document.getElementById("editarEstado").value =
-        normalizarEstado(invitado.estado);
+    document.getElementById(
+        "editarPersonas"
+    ).value =
+        Number(
+            invitado.personas
+        ) || 0;
+
+
+    document.getElementById(
+        "editarEstado"
+    ).value =
+        normalizarEstado(
+            invitado.estado
+        );
 
 
     document
-        .getElementById("modalEditar")
+        .getElementById(
+            "modalEditar"
+        )
         .classList.add("activo");
 
 }
@@ -1105,8 +1670,12 @@ function cerrarEditar(){
     filaEditar = null;
 
     document
-        .getElementById("modalEditar")
-        .classList.remove("activo");
+        .getElementById(
+            "modalEditar"
+        )
+        .classList.remove(
+            "activo"
+        );
 
 }
 
@@ -1115,138 +1684,69 @@ function cerrarEditar(){
    GUARDAR EDICIÓN
 ===================================================== */
 
-async function guardarEdicion(){
+function guardarEdicion(){
 
-    if(!filaEditar){
-
-        alert("No se encontró la fila.");
-
-        return;
-
-    }
+    if(!filaEditar) return;
 
 
     const nombre =
-        document
-            .getElementById("editarNombre")
-            .value
-            .trim();
+        document.getElementById(
+            "editarNombre"
+        ).value.trim();
 
 
     const personas =
         Number(
-            document
-                .getElementById("editarPersonas")
-                .value
+            document.getElementById(
+                "editarPersonas"
+            ).value
         ) || 0;
 
 
     const estado =
-        document
-            .getElementById("editarEstado")
-            .value;
+        document.getElementById(
+            "editarEstado"
+        ).value;
 
 
     if(!nombre){
 
-        alert("Ingresá el nombre del invitado.");
+        alert(
+            "Ingresá el nombre."
+        );
 
         return;
 
     }
 
 
-    const boton =
-        document.querySelector(
-            "#modalEditar .btn-guardar"
-        );
+    enviarFormulario({
 
+        action:
+            "editar",
 
-    boton.disabled = true;
+        fila:
+            filaEditar,
 
-    boton.textContent =
-        "Guardando...";
+        nombre:
+            nombre,
 
+        personas:
+            personas,
 
-    try{
-
-        /*
-         * IMPORTANTE:
-         * Enviamos parámetros normales,
-         * no JSON.
-         * Esto coincide con e.parameter
-         * de Código.gs.
-         */
-
-        const datos =
-            new URLSearchParams();
-
-        datos.append(
-            "action",
-            "editar"
-        );
-
-        datos.append(
-            "fila",
-            filaEditar
-        );
-
-        datos.append(
-            "nombre",
-            nombre
-        );
-
-        datos.append(
-            "personas",
-            personas
-        );
-
-        datos.append(
-            "estado",
+        estado:
             estado
-        );
+
+    });
 
 
-        await fetch(
-            SCRIPT_URL,
-            {
-                method:"POST",
-                mode:"no-cors",
-                body:datos
-            }
-        );
+    cerrarEditar();
 
 
-        cerrarEditar();
-
-
-        /*
-         * Esperamos un momento para que
-         * Google termine de guardar.
-         */
-
-        setTimeout(
-            cargarInvitados,
-            900
-        );
-
-
-    }catch(error){
-
-        console.error(error);
-
-        alert(
-            "No se pudo guardar el cambio."
-        );
-
-    }finally{
-
-        boton.disabled = false;
-
-        boton.textContent =
-            "Guardar cambios";
-
-    }
+    setTimeout(
+        cargarInvitados,
+        1000
+    );
 
 }
 
@@ -1260,21 +1760,29 @@ function abrirEliminar(indice){
     const invitado =
         invitados[indice];
 
+
     if(!invitado) return;
 
+
     filaEliminar =
-        invitado.fila;
+        Number(invitado.fila);
 
 
-    document.getElementById("textoEliminar").textContent =
+    document.getElementById(
+        "textoEliminar"
+    ).textContent =
         "¿Querés eliminar la respuesta de " +
         invitado.nombre +
         "?";
 
 
     document
-        .getElementById("modalEliminar")
-        .classList.add("activo");
+        .getElementById(
+            "modalEliminar"
+        )
+        .classList.add(
+            "activo"
+        );
 
 }
 
@@ -1288,8 +1796,12 @@ function cerrarEliminar(){
     filaEliminar = null;
 
     document
-        .getElementById("modalEliminar")
-        .classList.remove("activo");
+        .getElementById(
+            "modalEliminar"
+        )
+        .classList.remove(
+            "activo"
+        );
 
 }
 
@@ -1298,86 +1810,109 @@ function cerrarEliminar(){
    CONFIRMAR ELIMINACIÓN
 ===================================================== */
 
-async function confirmarEliminar(){
+function confirmarEliminar(){
 
-    if(!filaEliminar){
-
-        alert("No se encontró la fila.");
-
-        return;
-
-    }
+    if(!filaEliminar) return;
 
 
-    const boton =
-        document.querySelector(
-            "#modalEliminar .btn-eliminar-confirmar"
-        );
+    enviarFormulario({
 
+        action:
+            "eliminar",
 
-    boton.disabled = true;
-
-    boton.textContent =
-        "Eliminando...";
-
-
-    try{
-
-        const datos =
-            new URLSearchParams();
-
-        datos.append(
-            "action",
-            "eliminar"
-        );
-
-        datos.append(
-            "fila",
+        fila:
             filaEliminar
-        );
+
+    });
 
 
-        await fetch(
-            SCRIPT_URL,
-            {
-                method:"POST",
-                mode:"no-cors",
-                body:datos
-            }
-        );
+    cerrarEliminar();
 
 
-        cerrarEliminar();
-
-
-        setTimeout(
-            cargarInvitados,
-            900
-        );
-
-
-    }catch(error){
-
-        console.error(error);
-
-        alert(
-            "No se pudo eliminar la respuesta."
-        );
-
-    }finally{
-
-        boton.disabled = false;
-
-        boton.textContent =
-            "Eliminar";
-
-    }
+    setTimeout(
+        cargarInvitados,
+        1000
+    );
 
 }
 
 
 /* =====================================================
-   NORMALIZAR ESTADO
+   ENVIAR POST SIN CORS
+===================================================== */
+
+function enviarFormulario(datos){
+
+    const formulario =
+        document.createElement(
+            "form"
+        );
+
+
+    formulario.method =
+        "POST";
+
+
+    formulario.action =
+        SCRIPT_URL;
+
+
+    formulario.target =
+        "envioOculto";
+
+
+    formulario.style.display =
+        "none";
+
+
+    Object.keys(datos)
+        .forEach(
+            function(clave){
+
+                const input =
+                    document.createElement(
+                        "input"
+                    );
+
+                input.type =
+                    "hidden";
+
+                input.name =
+                    clave;
+
+                input.value =
+                    datos[clave];
+
+                formulario.appendChild(
+                    input
+                );
+
+            }
+        );
+
+
+    document.body.appendChild(
+        formulario
+    );
+
+
+    formulario.submit();
+
+
+    setTimeout(
+        function(){
+
+            formulario.remove();
+
+        },
+        2000
+    );
+
+}
+
+
+/* =====================================================
+   ESTADO
 ===================================================== */
 
 function normalizarEstado(estado){
@@ -1388,17 +1923,27 @@ function normalizarEstado(estado){
         ).toLowerCase();
 
 
-    if(estado === "confirmado"){
+    if(
+        estado ===
+        "confirmado"
+    ){
+
         return "confirmado";
+
     }
 
 
     if(
+
         estado === "no" ||
-        estado === "no asiste" ||
-        estado === "no_asiste"
+
+        estado ===
+            "no asiste"
+
     ){
+
         return "no";
+
     }
 
 
@@ -1408,49 +1953,49 @@ function normalizarEstado(estado){
 
 
 /* =====================================================
-   FORMATEAR FECHA
+   FECHA
 ===================================================== */
 
 function formatearFecha(fecha){
 
     if(!fecha){
+
         return "—";
+
     }
 
 
-    try{
-
-        const d =
-            new Date(fecha);
+    const d =
+        new Date(fecha);
 
 
-        if(isNaN(d.getTime())){
-            return String(fecha);
-        }
-
-
-        return d.toLocaleString(
-            "es-AR",
-            {
-                day:"2-digit",
-                month:"2-digit",
-                year:"numeric",
-                hour:"2-digit",
-                minute:"2-digit"
-            }
-        );
-
-    }catch(error){
+    if(
+        isNaN(
+            d.getTime()
+        )
+    ){
 
         return String(fecha);
 
     }
 
+
+    return d.toLocaleString(
+        "es-AR",
+        {
+            day:"2-digit",
+            month:"2-digit",
+            year:"numeric",
+            hour:"2-digit",
+            minute:"2-digit"
+        }
+    );
+
 }
 
 
 /* =====================================================
-   SEGURIDAD HTML
+   SEGURIDAD
 ===================================================== */
 
 function escaparHTML(texto){
@@ -1458,54 +2003,44 @@ function escaparHTML(texto){
     return String(
         texto ?? ""
     )
-    .replace(/&/g,"&amp;")
-    .replace(/</g,"&lt;")
-    .replace(/>/g,"&gt;")
-    .replace(/"/g,"&quot;")
-    .replace(/'/g,"&#039;");
+
+    .replace(
+        /&/g,
+        "&amp;"
+    )
+
+    .replace(
+        /</g,
+        "&lt;"
+    )
+
+    .replace(
+        />/g,
+        "&gt;"
+    )
+
+    .replace(
+        /"/g,
+        "&quot;"
+    )
+
+    .replace(
+        /'/g,
+        "&#039;"
+    );
 
 }
 
 
 /* =====================================================
-   CERRAR MODALES AL TOCAR AFUERA
-===================================================== */
-
-document
-    .getElementById("modalEditar")
-    .addEventListener(
-        "click",
-        function(e){
-
-            if(e.target === this){
-                cerrarEditar();
-            }
-
-        }
-    );
-
-
-document
-    .getElementById("modalEliminar")
-    .addEventListener(
-        "click",
-        function(e){
-
-            if(e.target === this){
-                cerrarEliminar();
-            }
-
-        }
-    );
-
-
-/* =====================================================
-   INICIAR
+   INICIO
 ===================================================== */
 
 cargarInvitados();
 
 </script>
 
+
 </body>
+
 </html>

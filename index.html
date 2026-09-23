@@ -4,13 +4,11 @@
 
 <meta charset="UTF-8">
 
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Tamy & Thiago | Panel</title>
 
-<link rel="preconnect"
-      href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 
 <link rel="preconnect"
       href="https://fonts.gstatic.com"
@@ -25,7 +23,6 @@
 * {
     box-sizing: border-box;
 }
-
 
 body {
 
@@ -47,10 +44,6 @@ body {
 }
 
 
-/* =====================================================
-   CONTENEDOR
-===================================================== */
-
 .container {
 
     width: 92%;
@@ -63,9 +56,9 @@ body {
 }
 
 
-/* =====================================================
+/* =========================
    ENCABEZADO
-===================================================== */
+========================= */
 
 .header {
 
@@ -73,7 +66,6 @@ body {
 
     margin-bottom: 35px;
 }
-
 
 .header .small {
 
@@ -85,7 +77,6 @@ body {
 
     margin-bottom: 8px;
 }
-
 
 .header h1 {
 
@@ -100,7 +91,6 @@ body {
     color: #73585b;
 }
 
-
 .header .subtitle {
 
     margin-top: 5px;
@@ -112,7 +102,6 @@ body {
     color: #a88b8c;
 }
 
-
 .header .symbol {
 
     font-size: 20px;
@@ -123,22 +112,20 @@ body {
 }
 
 
-/* =====================================================
-   TARJETAS
-===================================================== */
+/* =========================
+   ESTADÍSTICAS
+========================= */
 
 .stats {
 
     display: grid;
 
-    grid-template-columns:
-        repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
 
     gap: 16px;
 
     margin-bottom: 35px;
 }
-
 
 .stat {
 
@@ -156,7 +143,6 @@ body {
         0 8px 25px rgba(120,90,80,.07);
 }
 
-
 .stat-icon {
 
     font-size: 20px;
@@ -165,7 +151,6 @@ body {
 
     color: #b28d89;
 }
-
 
 .stat-number {
 
@@ -177,7 +162,6 @@ body {
 
     color: #74595c;
 }
-
 
 .stat-label {
 
@@ -191,9 +175,9 @@ body {
 }
 
 
-/* =====================================================
-   PANEL PRINCIPAL
-===================================================== */
+/* =========================
+   TARJETA
+========================= */
 
 .card {
 
@@ -209,7 +193,6 @@ body {
         0 12px 35px rgba(120,90,80,.08);
 }
 
-
 .card-header {
 
     display: flex;
@@ -223,7 +206,6 @@ body {
     margin-bottom: 22px;
 }
 
-
 .card-title {
 
     font-family: "Cormorant Garamond", serif;
@@ -235,16 +217,16 @@ body {
     margin: 0;
 }
 
-
 .connection {
+
+    margin-top: 5px;
 
     font-size: 11px;
 
     color: #8c7777;
 }
 
-
-.connection span {
+.connection-dot {
 
     display: inline-block;
 
@@ -252,17 +234,17 @@ body {
 
     height: 8px;
 
-    background: #8ea58c;
-
     border-radius: 50%;
 
     margin-right: 5px;
+
+    background: #8ea58c;
 }
 
 
-/* =====================================================
+/* =========================
    BOTÓN ACTUALIZAR
-===================================================== */
+========================= */
 
 .refresh {
 
@@ -285,24 +267,20 @@ body {
     transition: .2s;
 }
 
-
 .refresh:hover {
 
     background: #f5e9e5;
-
-    transform: translateY(-1px);
 }
 
 
-/* =====================================================
+/* =========================
    TABLA
-===================================================== */
+========================= */
 
 .table-wrap {
 
     overflow-x: auto;
 }
-
 
 table {
 
@@ -310,9 +288,8 @@ table {
 
     border-collapse: collapse;
 
-    min-width: 650px;
+    min-width: 700px;
 }
-
 
 th {
 
@@ -331,7 +308,6 @@ th {
     border-bottom: 1px solid #eadbd6;
 }
 
-
 td {
 
     padding: 16px 12px;
@@ -343,16 +319,15 @@ td {
     color: #665454;
 }
 
-
 td:first-child {
 
     font-weight: 600;
 }
 
 
-/* =====================================================
+/* =========================
    ESTADOS
-===================================================== */
+========================= */
 
 .status {
 
@@ -369,7 +344,6 @@ td:first-child {
     text-transform: capitalize;
 }
 
-
 .status.confirmado {
 
     background: #e8f0e5;
@@ -377,14 +351,12 @@ td:first-child {
     color: #62785e;
 }
 
-
 .status.no {
 
     background: #f3e3e0;
 
     color: #9a6863;
 }
-
 
 .status.pendiente {
 
@@ -394,9 +366,9 @@ td:first-child {
 }
 
 
-/* =====================================================
-   BOTONES DE ACCIÓN
-===================================================== */
+/* =========================
+   ACCIONES
+========================= */
 
 .actions {
 
@@ -407,12 +379,11 @@ td:first-child {
     flex-wrap: wrap;
 }
 
+.action-btn {
 
-.btn {
+    border: 0;
 
-    border: none;
-
-    border-radius: 20px;
+    border-radius: 18px;
 
     padding: 7px 11px;
 
@@ -425,22 +396,19 @@ td:first-child {
     transition: .2s;
 }
 
-
-.btn:hover {
+.action-btn:hover {
 
     transform: translateY(-1px);
 }
 
-
-.btn-edit {
+.edit-btn {
 
     background: #eee3df;
 
     color: #765d5d;
 }
 
-
-.btn-delete {
+.delete-btn {
 
     background: #f4e2df;
 
@@ -448,33 +416,15 @@ td:first-child {
 }
 
 
-/* =====================================================
-   SIN RESULTADOS
-===================================================== */
-
-.empty {
-
-    text-align: center;
-
-    padding: 35px 15px;
-
-    color: #a18d8d;
-
-    font-size: 13px;
-}
-
-
-/* =====================================================
+/* =========================
    MODAL
-===================================================== */
+========================= */
 
-.modal-bg {
+.modal {
 
     position: fixed;
 
     inset: 0;
-
-    background: rgba(65,45,45,.45);
 
     display: none;
 
@@ -484,17 +434,17 @@ td:first-child {
 
     padding: 20px;
 
-    z-index: 1000;
+    background: rgba(65,45,45,.45);
+
+    z-index: 9999;
 }
 
-
-.modal-bg.show {
+.modal.visible {
 
     display: flex;
 }
 
-
-.modal {
+.modal-box {
 
     width: 100%;
 
@@ -510,8 +460,7 @@ td:first-child {
         0 20px 60px rgba(60,40,40,.2);
 }
 
-
-.modal h2 {
+.modal-box h2 {
 
     margin: 0 0 20px;
 
@@ -522,35 +471,32 @@ td:first-child {
     color: #73585b;
 }
 
-
-.form-group {
+.field {
 
     margin-bottom: 15px;
 }
 
-
-.form-group label {
+.field label {
 
     display: block;
 
-    font-size: 10px;
+    margin-bottom: 6px;
 
-    text-transform: uppercase;
+    font-size: 10px;
 
     letter-spacing: 1px;
 
-    color: #9b8383;
+    text-transform: uppercase;
 
-    margin-bottom: 6px;
+    color: #9b8383;
 }
 
-
-.form-group input,
-.form-group select {
+.field input,
+.field select {
 
     width: 100%;
 
-    padding: 12px 13px;
+    padding: 12px;
 
     border: 1px solid #dfceca;
 
@@ -562,34 +508,23 @@ td:first-child {
 
     font-family: "Montserrat", sans-serif;
 
-    font-size: 13px;
-
     outline: none;
 }
 
-
-.form-group input:focus,
-.form-group select:focus {
-
-    border-color: #b8958f;
-}
-
-
-.modal-buttons {
+.modal-actions {
 
     display: flex;
 
     justify-content: flex-end;
 
-    gap: 9px;
+    gap: 10px;
 
     margin-top: 22px;
 }
 
+.modal-button {
 
-.modal-btn {
-
-    border: none;
+    border: 0;
 
     border-radius: 20px;
 
@@ -602,16 +537,14 @@ td:first-child {
     font-size: 11px;
 }
 
-
-.cancel {
+.cancel-button {
 
     background: #eee6e3;
 
     color: #765d5d;
 }
 
-
-.save {
+.save-button {
 
     background: #8e706f;
 
@@ -619,15 +552,16 @@ td:first-child {
 }
 
 
-/* =====================================================
-   LOADING
-===================================================== */
+/* =========================
+   MENSAJES
+========================= */
 
-.loading {
+.loading,
+.empty {
 
     text-align: center;
 
-    padding: 30px;
+    padding: 35px 15px;
 
     color: #9a8585;
 
@@ -635,16 +569,15 @@ td:first-child {
 }
 
 
-/* =====================================================
+/* =========================
    RESPONSIVE
-===================================================== */
+========================= */
 
 @media(max-width: 800px) {
 
     .stats {
 
-        grid-template-columns:
-            repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .header h1 {
@@ -658,9 +591,7 @@ td:first-child {
 
         flex-direction: column;
     }
-
 }
-
 
 @media(max-width: 500px) {
 
@@ -669,11 +600,6 @@ td:first-child {
         width: 94%;
 
         padding-top: 30px;
-    }
-
-    .stats {
-
-        gap: 10px;
     }
 
     .stat {
@@ -695,7 +621,6 @@ td:first-child {
 
         font-size: 40px;
     }
-
 }
 
 </style>
@@ -708,10 +633,6 @@ td:first-child {
 
 <div class="container">
 
-
-    <!-- =================================================
-         ENCABEZADO
-    ================================================== -->
 
     <header class="header">
 
@@ -734,10 +655,7 @@ td:first-child {
     </header>
 
 
-
-    <!-- =================================================
-         ESTADÍSTICAS
-    ================================================== -->
+    <!-- ESTADÍSTICAS -->
 
     <section class="stats">
 
@@ -750,8 +668,10 @@ td:first-child {
 
             <div
                 class="stat-number"
-                id="confirmados">
+                id="totalConfirmados">
+
                 0
+
             </div>
 
             <div class="stat-label">
@@ -759,7 +679,6 @@ td:first-child {
             </div>
 
         </div>
-
 
 
         <div class="stat">
@@ -770,8 +689,10 @@ td:first-child {
 
             <div
                 class="stat-number"
-                id="personas">
+                id="totalPersonas">
+
                 0
+
             </div>
 
             <div class="stat-label">
@@ -779,7 +700,6 @@ td:first-child {
             </div>
 
         </div>
-
 
 
         <div class="stat">
@@ -790,8 +710,10 @@ td:first-child {
 
             <div
                 class="stat-number"
-                id="noAsisten">
+                id="totalNo">
+
                 0
+
             </div>
 
             <div class="stat-label">
@@ -799,7 +721,6 @@ td:first-child {
             </div>
 
         </div>
-
 
 
         <div class="stat">
@@ -810,8 +731,10 @@ td:first-child {
 
             <div
                 class="stat-number"
-                id="pendientes">
+                id="totalPendientes">
+
                 0
+
             </div>
 
             <div class="stat-label">
@@ -820,13 +743,11 @@ td:first-child {
 
         </div>
 
+
     </section>
 
 
-
-    <!-- =================================================
-         LISTA
-    ================================================== -->
+    <!-- LISTA -->
 
     <section class="card">
 
@@ -844,7 +765,10 @@ td:first-child {
                     class="connection"
                     id="connection">
 
-                    <span></span>
+                    <span
+                        class="connection-dot">
+                    </span>
+
                     Conectando...
 
                 </div>
@@ -864,10 +788,9 @@ td:first-child {
         </div>
 
 
-
         <div
             class="table-wrap"
-            id="tablaContainer">
+            id="tabla">
 
             <div class="loading">
                 Cargando respuestas...
@@ -882,17 +805,13 @@ td:first-child {
 </div>
 
 
-
-<!-- =====================================================
-     MODAL EDITAR
-====================================================== -->
+<!-- MODAL -->
 
 <div
-    class="modal-bg"
-    id="modalEditar">
+    class="modal"
+    id="modal">
 
-
-    <div class="modal">
+    <div class="modal-box">
 
 
         <h2>
@@ -900,7 +819,7 @@ td:first-child {
         </h2>
 
 
-        <div class="form-group">
+        <div class="field">
 
             <label>
                 Nombre
@@ -908,12 +827,12 @@ td:first-child {
 
             <input
                 type="text"
-                id="editNombre">
+                id="nombreEditar">
 
         </div>
 
 
-        <div class="form-group">
+        <div class="field">
 
             <label>
                 Personas
@@ -921,19 +840,19 @@ td:first-child {
 
             <input
                 type="number"
-                id="editPersonas"
+                id="personasEditar"
                 min="0">
 
         </div>
 
 
-        <div class="form-group">
+        <div class="field">
 
             <label>
                 Estado
             </label>
 
-            <select id="editEstado">
+            <select id="estadoEditar">
 
                 <option value="confirmado">
                     Confirmado
@@ -952,10 +871,11 @@ td:first-child {
         </div>
 
 
-        <div class="modal-buttons">
+        <div class="modal-actions">
+
 
             <button
-                class="modal-btn cancel"
+                class="modal-button cancel-button"
                 onclick="cerrarModal()">
 
                 Cancelar
@@ -964,12 +884,14 @@ td:first-child {
 
 
             <button
-                class="modal-btn save"
-                onclick="guardarEdicion()">
+                class="modal-button save-button"
+                id="guardarBtn"
+                onclick="guardarCambios()">
 
-                Guardar cambios
+                Guardar
 
             </button>
+
 
         </div>
 
@@ -983,37 +905,35 @@ td:first-child {
 <script>
 
 
-// =====================================================
-// URL DEL GOOGLE APPS SCRIPT
-// =====================================================
+/* =====================================================
+   URL
+===================================================== */
 
 const SCRIPT_URL =
-    "https://script.google.com/macros/s/AKfycbzjrfUcgu0RafzyAqLHOs7UbPneYO492QBNW7lETNyadxrtTcTYRO_SZGBom_k9ZZEM/exec";
+"https://script.google.com/macros/s/AKfycbzjrfUcgu0RafzyAqLHOs7UbPneYO492QBNW7lETNyadxrtTcTYRO_SZGBom_k9ZZEM/exec";
 
 
-// =====================================================
-// VARIABLES
-// =====================================================
+/* =====================================================
+   VARIABLES
+===================================================== */
 
 let invitados = [];
 
-let filaEditando = null;
+let filaActual = null;
 
 
-// =====================================================
-// CARGAR INVITADOS
-// =====================================================
+/* =====================================================
+   CARGAR
+===================================================== */
 
 async function cargarInvitados() {
 
 
-    const container =
-        document.getElementById(
-            "tablaContainer"
-        );
+    const tabla =
+        document.getElementById("tabla");
 
 
-    container.innerHTML = `
+    tabla.innerHTML = `
         <div class="loading">
             Cargando respuestas...
         </div>
@@ -1023,54 +943,110 @@ async function cargarInvitados() {
     try {
 
 
-        const respuesta =
-            await fetch(
-                SCRIPT_URL +
-                "?action=getInvitados&t=" +
-                Date.now()
+        const url =
+            SCRIPT_URL +
+            "?action=getInvitados&_=" +
+            Date.now();
+
+
+        const response =
+            await fetch(url, {
+                method: "GET",
+                cache: "no-store"
+            });
+
+
+        if (!response.ok) {
+
+            throw new Error(
+                "Error HTTP " +
+                response.status
             );
+
+        }
+
+
+        const texto =
+            await response.text();
+
+
+        if (!texto) {
+
+            throw new Error(
+                "Respuesta vacía"
+            );
+
+        }
 
 
         invitados =
-            await respuesta.json();
+            JSON.parse(texto);
 
 
-        mostrarInvitados();
+        if (!Array.isArray(invitados)) {
 
-        actualizarEstadisticas();
+            throw new Error(
+                "Formato incorrecto"
+            );
+
+        }
+
+
+        mostrarTabla();
+
+        calcularTotales();
 
 
         document.getElementById(
             "connection"
         ).innerHTML = `
-            <span></span>
+
+            <span
+                class="connection-dot">
+            </span>
+
             Conectado · actualizado ahora
+
         `;
 
 
     }
-
-
     catch(error) {
 
 
-        console.error(error);
+        console.error(
+            "Error cargando invitados:",
+            error
+        );
 
 
         document.getElementById(
             "connection"
         ).innerHTML = `
-            <span style="background:#b66"></span>
-            No se pudieron cargar las respuestas
+
+            <span
+                class="connection-dot"
+                style="background:#b66">
+            </span>
+
+            Error de conexión
+
         `;
 
 
-        container.innerHTML = `
+        tabla.innerHTML = `
+
             <div class="empty">
+
                 No se pudieron cargar las respuestas.
+
                 <br><br>
-                Tocá "Actualizar respuestas" para intentar nuevamente.
+
+                Revisá la conexión con Google y
+                tocá "Actualizar respuestas".
+
             </div>
+
         `;
 
     }
@@ -1078,18 +1054,15 @@ async function cargarInvitados() {
 }
 
 
+/* =====================================================
+   MOSTRAR TABLA
+===================================================== */
 
-// =====================================================
-// MOSTRAR INVITADOS
-// =====================================================
-
-function mostrarInvitados() {
+function mostrarTabla() {
 
 
-    const container =
-        document.getElementById(
-            "tablaContainer"
-        );
+    const tabla =
+        document.getElementById("tabla");
 
 
     if (
@@ -1097,10 +1070,14 @@ function mostrarInvitados() {
         invitados.length === 0
     ) {
 
-        container.innerHTML = `
+        tabla.innerHTML = `
+
             <div class="empty">
-                Todavía no hay respuestas.
+
+                No hay respuestas todavía.
+
             </div>
+
         `;
 
         return;
@@ -1141,109 +1118,94 @@ function mostrarInvitados() {
     `;
 
 
-    invitados.forEach(
-        function(invitado) {
+    invitados.forEach(function(inv) {
 
 
-            let estado =
-                String(
-                    invitado.estado ||
-                    "pendiente"
-                ).toLowerCase();
+        const estado =
+            normalizarEstado(
+                inv.estado
+            );
 
 
-            let textoEstado =
-                estado;
+        let texto =
+            "Pendiente";
 
 
-            if (
-                estado === "confirmado"
-            ) {
+        if (
+            estado === "confirmado"
+        ) {
 
-                textoEstado =
-                    "Confirmado";
-
-            }
-
-
-            if (
-                estado === "no"
-            ) {
-
-                textoEstado =
-                    "No asiste";
-
-            }
-
-
-            if (
-                estado === "pendiente"
-            ) {
-
-                textoEstado =
-                    "Pendiente";
-
-            }
-
-
-            html += `
-
-                <tr>
-
-                    <td>
-                        ${escapeHTML(
-                            invitado.nombre
-                        )}
-                    </td>
-
-                    <td>
-                        ${Number(
-                            invitado.personas
-                        ) || 0}
-                    </td>
-
-                    <td>
-
-                        <span
-                            class="status ${escapeHTML(estado)}">
-
-                            ${textoEstado}
-
-                        </span>
-
-                    </td>
-
-                    <td>
-
-                        <div class="actions">
-
-                            <button
-                                class="btn btn-edit"
-                                onclick="abrirEditar(${invitado.fila})">
-
-                                ✏️ Editar
-
-                            </button>
-
-
-                            <button
-                                class="btn btn-delete"
-                                onclick="eliminarInvitado(${invitado.fila}, '${escapeJS(invitado.nombre)}')">
-
-                                🗑️ Eliminar
-
-                            </button>
-
-                        </div>
-
-                    </td>
-
-                </tr>
-
-            `;
+            texto =
+                "Confirmado";
 
         }
-    );
+
+
+        if (
+            estado === "no"
+        ) {
+
+            texto =
+                "No asiste";
+
+        }
+
+
+        html += `
+
+            <tr>
+
+                <td>
+                    ${escaparHTML(inv.nombre)}
+                </td>
+
+                <td>
+                    ${Number(inv.personas) || 0}
+                </td>
+
+                <td>
+
+                    <span
+                        class="status ${estado}">
+
+                        ${texto}
+
+                    </span>
+
+                </td>
+
+                <td>
+
+                    <div class="actions">
+
+
+                        <button
+                            class="action-btn edit-btn"
+                            onclick="editarInvitado(${Number(inv.fila)})">
+
+                            ✏️ Editar
+
+                        </button>
+
+
+                        <button
+                            class="action-btn delete-btn"
+                            onclick="eliminarInvitado(${Number(inv.fila)})">
+
+                            🗑️ Eliminar
+
+                        </button>
+
+
+                    </div>
+
+                </td>
+
+            </tr>
+
+        `;
+
+    });
 
 
     html += `
@@ -1255,120 +1217,106 @@ function mostrarInvitados() {
     `;
 
 
-    container.innerHTML =
+    tabla.innerHTML =
         html;
 
 }
 
 
+/* =====================================================
+   TOTALES
+===================================================== */
 
-// =====================================================
-// ESTADÍSTICAS
-// =====================================================
-
-function actualizarEstadisticas() {
+function calcularTotales() {
 
 
     let confirmados = 0;
 
     let personas = 0;
 
-    let noAsisten = 0;
+    let no = 0;
 
     let pendientes = 0;
 
 
-    invitados.forEach(
-        function(invitado) {
+    invitados.forEach(function(inv) {
 
 
-            const estado =
-                String(
-                    invitado.estado ||
-                    "pendiente"
-                ).toLowerCase();
+        const estado =
+            normalizarEstado(
+                inv.estado
+            );
 
 
-            const cantidad =
-                Number(
-                    invitado.personas
-                ) || 0;
+        const cantidad =
+            Number(inv.personas) || 0;
 
 
-            if (
-                estado === "confirmado"
-            ) {
+        if (
+            estado === "confirmado"
+        ) {
 
-                confirmados++;
+            confirmados++;
 
-                personas += cantidad;
-
-            }
-
-
-            else if (
-                estado === "no"
-            ) {
-
-                noAsisten++;
-
-            }
-
-
-            else {
-
-                pendientes++;
-
-            }
+            personas += cantidad;
 
         }
-    );
+        else if (
+            estado === "no"
+        ) {
+
+            no++;
+
+        }
+        else {
+
+            pendientes++;
+
+        }
+
+    });
 
 
     document.getElementById(
-        "confirmados"
+        "totalConfirmados"
     ).textContent =
         confirmados;
 
 
     document.getElementById(
-        "personas"
+        "totalPersonas"
     ).textContent =
         personas;
 
 
     document.getElementById(
-        "noAsisten"
+        "totalNo"
     ).textContent =
-        noAsisten;
+        no;
 
 
     document.getElementById(
-        "pendientes"
+        "totalPendientes"
     ).textContent =
         pendientes;
 
 }
 
 
+/* =====================================================
+   EDITAR
+===================================================== */
 
-// =====================================================
-// ABRIR EDITAR
-// =====================================================
-
-function abrirEditar(fila) {
+function editarInvitado(fila) {
 
 
     const invitado =
-        invitados.find(
-            function(item) {
+        invitados.find(function(inv) {
 
-                return Number(
-                    item.fila
-                ) === Number(fila);
+            return Number(inv.fila) ===
+                   Number(fila);
 
-            }
-        );
+        });
 
 
     if (!invitado) {
@@ -1382,18 +1330,18 @@ function abrirEditar(fila) {
     }
 
 
-    filaEditando =
+    filaActual =
         Number(fila);
 
 
     document.getElementById(
-        "editNombre"
+        "nombreEditar"
     ).value =
         invitado.nombre || "";
 
 
     document.getElementById(
-        "editPersonas"
+        "personasEditar"
     ).value =
         Number(
             invitado.personas
@@ -1401,43 +1349,44 @@ function abrirEditar(fila) {
 
 
     document.getElementById(
-        "editEstado"
+        "estadoEditar"
     ).value =
-        invitado.estado || "pendiente";
+        normalizarEstado(
+            invitado.estado
+        );
 
 
     document.getElementById(
-        "modalEditar"
-    ).classList.add("show");
+        "modal"
+    ).classList.add("visible");
 
 }
 
 
-
-// =====================================================
-// CERRAR MODAL
-// =====================================================
+/* =====================================================
+   CERRAR
+===================================================== */
 
 function cerrarModal() {
 
     document.getElementById(
-        "modalEditar"
-    ).classList.remove("show");
+        "modal"
+    ).classList.remove("visible");
 
-    filaEditando = null;
+    filaActual =
+        null;
 
 }
 
 
+/* =====================================================
+   GUARDAR
+===================================================== */
 
-// =====================================================
-// GUARDAR EDICIÓN
-// =====================================================
-
-async function guardarEdicion() {
+async function guardarCambios() {
 
 
-    if (!filaEditando) {
+    if (!filaActual) {
 
         return;
 
@@ -1446,26 +1395,26 @@ async function guardarEdicion() {
 
     const nombre =
         document.getElementById(
-            "editNombre"
+            "nombreEditar"
         ).value.trim();
 
 
     const personas =
         document.getElementById(
-            "editPersonas"
+            "personasEditar"
         ).value;
 
 
     const estado =
         document.getElementById(
-            "editEstado"
+            "estadoEditar"
         ).value;
 
 
     if (!nombre) {
 
         alert(
-            "Escribí el nombre del invitado."
+            "Ingresá el nombre."
         );
 
         return;
@@ -1474,8 +1423,8 @@ async function guardarEdicion() {
 
 
     const boton =
-        document.querySelector(
-            ".save"
+        document.getElementById(
+            "guardarBtn"
         );
 
 
@@ -1500,7 +1449,7 @@ async function guardarEdicion() {
 
         datos.append(
             "fila",
-            filaEditando
+            String(filaActual)
         );
 
 
@@ -1512,7 +1461,7 @@ async function guardarEdicion() {
 
         datos.append(
             "personas",
-            personas
+            String(personas)
         );
 
 
@@ -1522,16 +1471,17 @@ async function guardarEdicion() {
         );
 
 
+        /*
+         * NO usamos mode:no-cors acá.
+         * El navegador enviará el formulario
+         * al Apps Script.
+         */
+
         await fetch(
             SCRIPT_URL,
             {
-
                 method: "POST",
-
-                mode: "no-cors",
-
                 body: datos
-
             }
         );
 
@@ -1540,19 +1490,17 @@ async function guardarEdicion() {
 
 
         /*
-         * Esperamos un momento para que
-         * Google Sheets termine de guardar.
+         * Esperamos que Google termine
+         * de guardar y volvemos a leer.
          */
 
         setTimeout(
             cargarInvitados,
-            700
+            1000
         );
 
 
     }
-
-
     catch(error) {
 
 
@@ -1566,33 +1514,41 @@ async function guardarEdicion() {
     }
 
 
-    finally {
+    boton.disabled = false;
 
-        boton.disabled = false;
-
-        boton.textContent =
-            "Guardar cambios";
-
-    }
+    boton.textContent =
+        "Guardar";
 
 }
 
 
+/* =====================================================
+   ELIMINAR
+===================================================== */
 
-// =====================================================
-// ELIMINAR INVITADO
-// =====================================================
+async function eliminarInvitado(fila) {
 
-async function eliminarInvitado(
-    fila,
-    nombre
-) {
+
+    const invitado =
+        invitados.find(function(inv) {
+
+            return Number(inv.fila) ===
+                   Number(fila);
+
+        });
+
+
+    if (!invitado) {
+
+        return;
+
+    }
 
 
     const confirmar =
         confirm(
-            "¿Querés eliminar a " +
-            nombre +
+            "¿Eliminar a " +
+            invitado.nombre +
             " de la lista?"
         );
 
@@ -1619,33 +1575,26 @@ async function eliminarInvitado(
 
         datos.append(
             "fila",
-            fila
+            String(fila)
         );
 
 
         await fetch(
             SCRIPT_URL,
             {
-
                 method: "POST",
-
-                mode: "no-cors",
-
                 body: datos
-
             }
         );
 
 
         setTimeout(
             cargarInvitados,
-            700
+            1000
         );
 
 
     }
-
-
     catch(error) {
 
 
@@ -1653,7 +1602,7 @@ async function eliminarInvitado(
 
 
         alert(
-            "No se pudo eliminar el invitado."
+            "No se pudo eliminar."
         );
 
     }
@@ -1661,33 +1610,76 @@ async function eliminarInvitado(
 }
 
 
+/* =====================================================
+   ESTADO
+===================================================== */
 
-// =====================================================
-// SEGURIDAD HTML
-// =====================================================
+function normalizarEstado(estado) {
 
-function escapeHTML(text) {
+
+    const valor =
+        String(
+            estado || ""
+        )
+        .trim()
+        .toLowerCase();
+
+
+    if (
+        valor === "confirmado"
+    ) {
+
+        return "confirmado";
+
+    }
+
+
+    if (
+        valor === "no" ||
+        valor === "no asiste"
+    ) {
+
+        return "no";
+
+    }
+
+
+    return "pendiente";
+
+}
+
+
+/* =====================================================
+   SEGURIDAD
+===================================================== */
+
+function escaparHTML(texto) {
 
 
     return String(
-        text ?? ""
+        texto ?? ""
     )
+
     .replace(
         /&/g,
         "&amp;"
     )
+
     .replace(
         /</g,
         "&lt;"
     )
+
     .replace(
         />/g,
         "&gt;"
     )
+
     .replace(
         /"/g,
         "&quot;"
     )
+
     .replace(
         /'/g,
         "&#039;"
@@ -1696,40 +1688,12 @@ function escapeHTML(text) {
 }
 
 
-
-// =====================================================
-// SEGURIDAD JAVASCRIPT
-// =====================================================
-
-function escapeJS(text) {
-
-
-    return String(
-        text ?? ""
-    )
-    .replace(
-        /\\/g,
-        "\\\\"
-    )
-    .replace(
-        /'/g,
-        "\\'"
-    )
-    .replace(
-        /\r?\n/g,
-        " "
-    );
-
-}
-
-
-
-// =====================================================
-// CERRAR MODAL TOCANDO AFUERA
-// =====================================================
+/* =====================================================
+   CERRAR MODAL AFUERA
+===================================================== */
 
 document.getElementById(
-    "modalEditar"
+    "modal"
 ).addEventListener(
     "click",
     function(event) {
@@ -1746,24 +1710,21 @@ document.getElementById(
 );
 
 
-
-// =====================================================
-// CARGA INICIAL
-// =====================================================
+/* =====================================================
+   INICIO
+===================================================== */
 
 cargarInvitados();
 
 
-
-// =====================================================
-// ACTUALIZAR CADA 30 SEGUNDOS
-// =====================================================
+/* =====================================================
+   ACTUALIZAR CADA 30 SEGUNDOS
+===================================================== */
 
 setInterval(
     cargarInvitados,
     30000
 );
-
 
 </script>
 

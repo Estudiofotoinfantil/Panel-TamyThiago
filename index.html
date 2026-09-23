@@ -1,825 +1,684 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Tamy & Thiago | Panel</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link rel="preconnect"
-      href="https://fonts.gstatic.com"
-      crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
-      rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
-* {
-    box-sizing: border-box;
+:root{
+    --fondo:#f8f3ee;
+    --blanco:#fffdfb;
+    --texto:#4d4141;
+    --suave:#8d7b7b;
+    --rosa:#b9878d;
+    --rosa-claro:#eadbdd;
+    --dorado:#b99a72;
+    --borde:#eadfda;
+    --verde:#809b86;
+    --rojo:#b97d7d;
+    --sombra:0 15px 45px rgba(91,65,65,.08);
 }
 
-body {
+*{
+    box-sizing:border-box;
+}
 
-    margin: 0;
-
-    min-height: 100vh;
-
+body{
+    margin:0;
     background:
-        radial-gradient(
-            circle at top,
-            #fffdfb 0%,
-            #f8f0ec 45%,
-            #f4e9e5 100%
-        );
-
-    color: #5e4b4b;
-
-    font-family: "Montserrat", sans-serif;
+        radial-gradient(circle at top left, rgba(234,219,221,.45), transparent 30%),
+        radial-gradient(circle at bottom right, rgba(232,221,207,.35), transparent 30%),
+        var(--fondo);
+    color:var(--texto);
+    font-family:'Montserrat',sans-serif;
+    min-height:100vh;
 }
 
-
-.container {
-
-    width: 92%;
-
-    max-width: 1100px;
-
-    margin: auto;
-
-    padding: 45px 0 60px;
-}
-
-
-/* =========================
+/* =====================================================
    ENCABEZADO
-========================= */
+===================================================== */
 
-.header {
-
-    text-align: center;
-
-    margin-bottom: 35px;
+header{
+    text-align:center;
+    padding:48px 20px 30px;
 }
 
-.header .small {
-
-    font-size: 11px;
-
-    letter-spacing: 4px;
-
-    color: #b18b83;
-
-    margin-bottom: 8px;
+.presenta{
+    font-size:10px;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    color:var(--dorado);
+    margin-bottom:12px;
 }
 
-.header h1 {
-
-    margin: 0;
-
-    font-family: "Cormorant Garamond", serif;
-
-    font-size: 55px;
-
-    font-weight: 600;
-
-    color: #73585b;
+h1{
+    font-family:'Cormorant Garamond',serif;
+    font-size:52px;
+    line-height:1;
+    margin:0;
+    font-weight:600;
+    color:#4d4141;
 }
 
-.header .subtitle {
-
-    margin-top: 5px;
-
-    font-size: 14px;
-
-    letter-spacing: 2px;
-
-    color: #a88b8c;
+.estrella{
+    color:var(--dorado);
+    font-size:18px;
+    margin:13px 0 10px;
 }
 
-.header .symbol {
-
-    font-size: 20px;
-
-    margin-top: 12px;
-
-    color: #b8958f;
+.subtitulo{
+    font-size:11px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    color:var(--suave);
 }
 
+/* =====================================================
+   CONTENEDOR
+===================================================== */
 
-/* =========================
-   ESTADÍSTICAS
-========================= */
-
-.stats {
-
-    display: grid;
-
-    grid-template-columns: repeat(4, 1fr);
-
-    gap: 16px;
-
-    margin-bottom: 35px;
+.contenedor{
+    width:min(1100px, calc(100% - 30px));
+    margin:auto;
+    padding-bottom:50px;
 }
 
-.stat {
+/* =====================================================
+   TARJETAS
+===================================================== */
 
-    background: rgba(255,255,255,.75);
-
-    border: 1px solid #eadbd6;
-
-    border-radius: 18px;
-
-    padding: 23px 15px;
-
-    text-align: center;
-
-    box-shadow:
-        0 8px 25px rgba(120,90,80,.07);
+.resumen{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+    margin-bottom:30px;
 }
 
-.stat-icon {
-
-    font-size: 20px;
-
-    margin-bottom: 7px;
-
-    color: #b28d89;
+.card{
+    background:rgba(255,253,251,.92);
+    border:1px solid var(--borde);
+    border-radius:20px;
+    padding:24px 15px;
+    text-align:center;
+    box-shadow:var(--sombra);
 }
 
-.stat-number {
-
-    font-family: "Cormorant Garamond", serif;
-
-    font-size: 39px;
-
-    font-weight: 600;
-
-    color: #74595c;
+.card-icon{
+    font-size:18px;
+    margin-bottom:7px;
 }
 
-.stat-label {
-
-    font-size: 11px;
-
-    letter-spacing: 1px;
-
-    text-transform: uppercase;
-
-    color: #9c8585;
+.card-numero{
+    font-family:'Cormorant Garamond',serif;
+    font-size:40px;
+    line-height:1;
+    color:var(--rosa);
+    margin-bottom:6px;
 }
 
-
-/* =========================
-   TARJETA
-========================= */
-
-.card {
-
-    background: rgba(255,255,255,.84);
-
-    border: 1px solid #eadbd6;
-
-    border-radius: 22px;
-
-    padding: 28px;
-
-    box-shadow:
-        0 12px 35px rgba(120,90,80,.08);
+.card-titulo{
+    font-size:10px;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    color:var(--suave);
 }
 
-.card-header {
+/* =====================================================
+   CABECERA DE LISTA
+===================================================== */
 
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: center;
-
-    gap: 15px;
-
-    margin-bottom: 22px;
+.lista-header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:15px;
+    margin-bottom:15px;
 }
 
-.card-title {
-
-    font-family: "Cormorant Garamond", serif;
-
-    font-size: 32px;
-
-    color: #73585b;
-
-    margin: 0;
+.lista-titulo{
+    font-family:'Cormorant Garamond',serif;
+    font-size:31px;
+    margin:0;
+    font-weight:600;
 }
 
-.connection {
-
-    margin-top: 5px;
-
-    font-size: 11px;
-
-    color: #8c7777;
+.lista-subtitulo{
+    font-size:10px;
+    color:var(--suave);
+    margin-top:3px;
+    letter-spacing:.5px;
 }
 
-.connection-dot {
-
-    display: inline-block;
-
-    width: 8px;
-
-    height: 8px;
-
-    border-radius: 50%;
-
-    margin-right: 5px;
-
-    background: #8ea58c;
+.btn-actualizar{
+    border:1px solid var(--borde);
+    background:var(--blanco);
+    color:var(--texto);
+    padding:11px 16px;
+    border-radius:30px;
+    cursor:pointer;
+    font-family:'Montserrat',sans-serif;
+    font-size:11px;
+    transition:.2s;
 }
 
-
-/* =========================
-   BOTÓN ACTUALIZAR
-========================= */
-
-.refresh {
-
-    border: 1px solid #d8c0ba;
-
-    background: #fffaf8;
-
-    color: #765c5d;
-
-    border-radius: 30px;
-
-    padding: 10px 18px;
-
-    font-family: "Montserrat", sans-serif;
-
-    font-size: 11px;
-
-    cursor: pointer;
-
-    transition: .2s;
+.btn-actualizar:hover{
+    background:var(--rosa-claro);
 }
 
-.refresh:hover {
-
-    background: #f5e9e5;
-}
-
-
-/* =========================
+/* =====================================================
    TABLA
-========================= */
+===================================================== */
 
-.table-wrap {
-
-    overflow-x: auto;
+.tabla-box{
+    background:rgba(255,253,251,.95);
+    border:1px solid var(--borde);
+    border-radius:22px;
+    box-shadow:var(--sombra);
+    overflow:hidden;
 }
 
-table {
-
-    width: 100%;
-
-    border-collapse: collapse;
-
-    min-width: 700px;
+.tabla-scroll{
+    overflow-x:auto;
 }
 
-th {
-
-    text-align: left;
-
-    font-size: 10px;
-
-    letter-spacing: 1px;
-
-    text-transform: uppercase;
-
-    color: #9d8585;
-
-    padding: 13px 12px;
-
-    border-bottom: 1px solid #eadbd6;
+table{
+    width:100%;
+    border-collapse:collapse;
+    min-width:700px;
 }
 
-td {
-
-    padding: 16px 12px;
-
-    border-bottom: 1px solid #f0e5e1;
-
-    font-size: 13px;
-
-    color: #665454;
+thead{
+    background:#f6efeb;
 }
 
-td:first-child {
-
-    font-weight: 600;
+th{
+    padding:17px 18px;
+    text-align:left;
+    font-size:9px;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    color:var(--suave);
+    font-weight:600;
 }
 
+td{
+    padding:17px 18px;
+    border-top:1px solid #eee5e1;
+    font-size:12px;
+    color:var(--texto);
+}
 
-/* =========================
+.nombre{
+    font-weight:600;
+}
+
+.fecha{
+    font-size:10px;
+    color:#9b8c8c;
+}
+
+/* =====================================================
    ESTADOS
-========================= */
+===================================================== */
 
-.status {
-
-    display: inline-block;
-
-    padding: 6px 11px;
-
-    border-radius: 20px;
-
-    font-size: 10px;
-
-    font-weight: 600;
-
-    text-transform: capitalize;
+.estado{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    padding:7px 11px;
+    border-radius:20px;
+    font-size:9px;
+    text-transform:uppercase;
+    letter-spacing:.7px;
+    font-weight:600;
 }
 
-.status.confirmado {
-
-    background: #e8f0e5;
-
-    color: #62785e;
+.estado.confirmado{
+    background:#edf4ee;
+    color:#69816e;
 }
 
-.status.no {
-
-    background: #f3e3e0;
-
-    color: #9a6863;
+.estado.no{
+    background:#f7eded;
+    color:#a26e6e;
 }
 
-.status.pendiente {
-
-    background: #f1ece2;
-
-    color: #8c795c;
+.estado.pendiente{
+    background:#f4f0e8;
+    color:#927f60;
 }
 
+/* =====================================================
+   BOTONES
+===================================================== */
 
-/* =========================
-   ACCIONES
-========================= */
-
-.actions {
-
-    display: flex;
-
-    gap: 7px;
-
-    flex-wrap: wrap;
+.acciones{
+    display:flex;
+    gap:7px;
 }
 
-.action-btn {
-
-    border: 0;
-
-    border-radius: 18px;
-
-    padding: 7px 11px;
-
-    font-family: "Montserrat", sans-serif;
-
-    font-size: 10px;
-
-    cursor: pointer;
-
-    transition: .2s;
+.btn-accion{
+    width:35px;
+    height:35px;
+    border-radius:50%;
+    border:1px solid var(--borde);
+    background:white;
+    cursor:pointer;
+    font-size:15px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition:.2s;
 }
 
-.action-btn:hover {
-
-    transform: translateY(-1px);
+.btn-editar:hover{
+    background:#f2e5e7;
+    border-color:#d9bdc1;
 }
 
-.edit-btn {
-
-    background: #eee3df;
-
-    color: #765d5d;
+.btn-eliminar:hover{
+    background:#f6e4e4;
+    border-color:#dfbbbb;
 }
 
-.delete-btn {
-
-    background: #f4e2df;
-
-    color: #98645f;
-}
-
-
-/* =========================
-   MODAL
-========================= */
-
-.modal {
-
-    position: fixed;
-
-    inset: 0;
-
-    display: none;
-
-    align-items: center;
-
-    justify-content: center;
-
-    padding: 20px;
-
-    background: rgba(65,45,45,.45);
-
-    z-index: 9999;
-}
-
-.modal.visible {
-
-    display: flex;
-}
-
-.modal-box {
-
-    width: 100%;
-
-    max-width: 430px;
-
-    background: #fffaf8;
-
-    border-radius: 22px;
-
-    padding: 30px;
-
-    box-shadow:
-        0 20px 60px rgba(60,40,40,.2);
-}
-
-.modal-box h2 {
-
-    margin: 0 0 20px;
-
-    font-family: "Cormorant Garamond", serif;
-
-    font-size: 32px;
-
-    color: #73585b;
-}
-
-.field {
-
-    margin-bottom: 15px;
-}
-
-.field label {
-
-    display: block;
-
-    margin-bottom: 6px;
-
-    font-size: 10px;
-
-    letter-spacing: 1px;
-
-    text-transform: uppercase;
-
-    color: #9b8383;
-}
-
-.field input,
-.field select {
-
-    width: 100%;
-
-    padding: 12px;
-
-    border: 1px solid #dfceca;
-
-    border-radius: 12px;
-
-    background: white;
-
-    color: #5e4b4b;
-
-    font-family: "Montserrat", sans-serif;
-
-    outline: none;
-}
-
-.modal-actions {
-
-    display: flex;
-
-    justify-content: flex-end;
-
-    gap: 10px;
-
-    margin-top: 22px;
-}
-
-.modal-button {
-
-    border: 0;
-
-    border-radius: 20px;
-
-    padding: 10px 18px;
-
-    cursor: pointer;
-
-    font-family: "Montserrat", sans-serif;
-
-    font-size: 11px;
-}
-
-.cancel-button {
-
-    background: #eee6e3;
-
-    color: #765d5d;
-}
-
-.save-button {
-
-    background: #8e706f;
-
-    color: white;
-}
-
-
-/* =========================
+/* =====================================================
    MENSAJES
-========================= */
+===================================================== */
 
-.loading,
-.empty {
-
-    text-align: center;
-
-    padding: 35px 15px;
-
-    color: #9a8585;
-
-    font-size: 12px;
+.estado-conexion{
+    text-align:center;
+    font-size:10px;
+    color:var(--suave);
+    padding:18px 10px 0;
 }
 
+.cargando{
+    text-align:center;
+    padding:45px 20px;
+    color:var(--suave);
+    font-size:12px;
+}
 
-/* =========================
+.error{
+    text-align:center;
+    padding:35px 20px;
+    color:#a26e6e;
+    font-size:12px;
+}
+
+/* =====================================================
+   MODAL
+===================================================== */
+
+.modal-fondo{
+    position:fixed;
+    inset:0;
+    background:rgba(62,47,47,.35);
+    backdrop-filter:blur(5px);
+    display:none;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+    z-index:1000;
+}
+
+.modal-fondo.activo{
+    display:flex;
+}
+
+.modal{
+    width:min(440px,100%);
+    background:#fffdfb;
+    border:1px solid var(--borde);
+    border-radius:25px;
+    box-shadow:0 25px 80px rgba(55,40,40,.2);
+    padding:30px;
+    animation:entrada .2s ease;
+}
+
+@keyframes entrada{
+    from{
+        opacity:0;
+        transform:translateY(10px) scale(.98);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0) scale(1);
+    }
+}
+
+.modal-icon{
+    text-align:center;
+    color:var(--dorado);
+    margin-bottom:5px;
+}
+
+.modal h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:32px;
+    text-align:center;
+    margin:0 0 6px;
+}
+
+.modal p{
+    text-align:center;
+    color:var(--suave);
+    font-size:11px;
+    margin:0 0 22px;
+}
+
+.form-grupo{
+    margin-bottom:15px;
+}
+
+.form-grupo label{
+    display:block;
+    font-size:9px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    color:var(--suave);
+    margin-bottom:7px;
+}
+
+.form-grupo input,
+.form-grupo select{
+    width:100%;
+    border:1px solid var(--borde);
+    background:#fff;
+    border-radius:12px;
+    padding:12px 13px;
+    outline:none;
+    font-family:'Montserrat',sans-serif;
+    color:var(--texto);
+    font-size:12px;
+}
+
+.form-grupo input:focus,
+.form-grupo select:focus{
+    border-color:var(--rosa);
+}
+
+.modal-botones{
+    display:flex;
+    gap:10px;
+    margin-top:22px;
+}
+
+.btn-cancelar,
+.btn-guardar{
+    flex:1;
+    border-radius:30px;
+    padding:12px;
+    cursor:pointer;
+    font-family:'Montserrat',sans-serif;
+    font-size:11px;
+}
+
+.btn-cancelar{
+    background:white;
+    border:1px solid var(--borde);
+    color:var(--texto);
+}
+
+.btn-guardar{
+    background:var(--rosa);
+    border:1px solid var(--rosa);
+    color:white;
+}
+
+/* =====================================================
+   MODAL ELIMINAR
+===================================================== */
+
+.modal.eliminar-modal{
+    text-align:center;
+}
+
+.icono-eliminar{
+    font-size:30px;
+    margin-bottom:5px;
+}
+
+.btn-eliminar-confirmar{
+    flex:1;
+    border:0;
+    border-radius:30px;
+    padding:12px;
+    cursor:pointer;
+    background:#b97d7d;
+    color:white;
+    font-family:'Montserrat',sans-serif;
+    font-size:11px;
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer{
+    text-align:center;
+    padding:0 20px 35px;
+    color:#a79898;
+    font-size:9px;
+    letter-spacing:1px;
+}
+
+/* =====================================================
    RESPONSIVE
-========================= */
+===================================================== */
 
-@media(max-width: 800px) {
+@media(max-width:750px){
 
-    .stats {
-
-        grid-template-columns: repeat(2, 1fr);
+    header{
+        padding-top:35px;
     }
 
-    .header h1 {
-
-        font-size: 45px;
+    h1{
+        font-size:44px;
     }
 
-    .card-header {
+    .resumen{
+        grid-template-columns:repeat(2,1fr);
+    }
 
-        align-items: flex-start;
+    .lista-header{
+        align-items:flex-start;
+        flex-direction:column;
+    }
 
-        flex-direction: column;
+    .btn-actualizar{
+        width:100%;
+    }
+
+    .contenedor{
+        width:min(100% - 20px,1100px);
     }
 }
 
-@media(max-width: 500px) {
+@media(max-width:430px){
 
-    .container {
-
-        width: 94%;
-
-        padding-top: 30px;
+    .card{
+        padding:20px 10px;
     }
 
-    .stat {
-
-        padding: 18px 8px;
+    .card-numero{
+        font-size:34px;
     }
 
-    .stat-number {
-
-        font-size: 32px;
+    .lista-titulo{
+        font-size:28px;
     }
 
-    .card {
-
-        padding: 18px;
-    }
-
-    .header h1 {
-
-        font-size: 40px;
+    .modal{
+        padding:25px 20px;
     }
 }
 
 </style>
-
 </head>
-
 
 <body>
 
+<header>
 
-<div class="container">
+    <div class="presenta">
+        Nova Invite presenta
+    </div>
+
+    <h1>Tamy & Thiago</h1>
+
+    <div class="estrella">✦</div>
+
+    <div class="subtitulo">
+        Panel de asistencia
+    </div>
+
+</header>
 
 
-    <header class="header">
+<main class="contenedor">
 
-        <div class="small">
-            NOVA INVITE PRESENTA
+    <!-- =================================================
+         RESUMEN
+    ================================================== -->
+
+    <section class="resumen">
+
+        <div class="card">
+            <div class="card-icon">♡</div>
+            <div class="card-numero" id="confirmados">0</div>
+            <div class="card-titulo">Confirmados</div>
         </div>
 
-        <h1>
-            Tamy & Thiago
-        </h1>
-
-        <div class="subtitle">
-            Panel de organización
+        <div class="card">
+            <div class="card-icon">♡</div>
+            <div class="card-numero" id="personas">0</div>
+            <div class="card-titulo">Personas</div>
         </div>
 
-        <div class="symbol">
-            ♡
+        <div class="card">
+            <div class="card-icon">×</div>
+            <div class="card-numero" id="noAsisten">0</div>
+            <div class="card-titulo">No asisten</div>
         </div>
 
-    </header>
-
-
-    <!-- ESTADÍSTICAS -->
-
-    <section class="stats">
-
-
-        <div class="stat">
-
-            <div class="stat-icon">
-                ♡
-            </div>
-
-            <div
-                class="stat-number"
-                id="totalConfirmados">
-
-                0
-
-            </div>
-
-            <div class="stat-label">
-                Confirmados
-            </div>
-
+        <div class="card">
+            <div class="card-icon">◌</div>
+            <div class="card-numero" id="pendientes">0</div>
+            <div class="card-titulo">Pendientes</div>
         </div>
-
-
-        <div class="stat">
-
-            <div class="stat-icon">
-                ♡
-            </div>
-
-            <div
-                class="stat-number"
-                id="totalPersonas">
-
-                0
-
-            </div>
-
-            <div class="stat-label">
-                Personas
-            </div>
-
-        </div>
-
-
-        <div class="stat">
-
-            <div class="stat-icon">
-                ×
-            </div>
-
-            <div
-                class="stat-number"
-                id="totalNo">
-
-                0
-
-            </div>
-
-            <div class="stat-label">
-                No asisten
-            </div>
-
-        </div>
-
-
-        <div class="stat">
-
-            <div class="stat-icon">
-                ◌
-            </div>
-
-            <div
-                class="stat-number"
-                id="totalPendientes">
-
-                0
-
-            </div>
-
-            <div class="stat-label">
-                Pendientes
-            </div>
-
-        </div>
-
 
     </section>
 
 
-    <!-- LISTA -->
+    <!-- =================================================
+         LISTA
+    ================================================== -->
 
-    <section class="card">
+    <section>
 
-
-        <div class="card-header">
-
+        <div class="lista-header">
 
             <div>
-
-                <h2 class="card-title">
-                    Lista de invitados
+                <h2 class="lista-titulo">
+                    Respuestas
                 </h2>
 
-                <div
-                    class="connection"
-                    id="connection">
-
-                    <span
-                        class="connection-dot">
-                    </span>
-
-                    Conectando...
-
+                <div class="lista-subtitulo">
+                    Lista de invitados
                 </div>
-
             </div>
-
 
             <button
-                class="refresh"
+                class="btn-actualizar"
                 onclick="cargarInvitados()">
-
                 ↻ &nbsp; Actualizar respuestas
-
             </button>
-
 
         </div>
 
 
-        <div
-            class="table-wrap"
-            id="tabla">
+        <div class="tabla-box">
 
-            <div class="loading">
-                Cargando respuestas...
+            <div class="tabla-scroll">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>Invitado</th>
+                            <th>Personas</th>
+                            <th>Estado</th>
+                            <th>Fecha</th>
+                            <th>Acciones</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="tablaInvitados">
+
+                        <tr>
+                            <td colspan="5">
+                                <div class="cargando">
+                                    Cargando respuestas...
+                                </div>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
             </div>
 
         </div>
 
+        <div
+            class="estado-conexion"
+            id="conexion">
+            Conectando...
+        </div>
 
     </section>
 
+</main>
 
-</div>
+
+<footer>
+    Tamy & Thiago · Panel de asistencia
+</footer>
 
 
-<!-- MODAL -->
+<!-- =====================================================
+     MODAL EDITAR
+====================================================== -->
 
 <div
-    class="modal"
-    id="modal">
+    class="modal-fondo"
+    id="modalEditar">
 
-    <div class="modal-box">
+    <div class="modal">
 
+        <div class="modal-icon">
+            ✦
+        </div>
 
-        <h2>
-            Editar invitado
-        </h2>
+        <h2>Editar invitado</h2>
 
+        <p>
+            Modificá los datos de la respuesta.
+        </p>
 
-        <div class="field">
+        <div class="form-grupo">
 
             <label>
                 Nombre
@@ -827,32 +686,34 @@ td:first-child {
 
             <input
                 type="text"
-                id="nombreEditar">
+                id="editarNombre"
+                autocomplete="off">
 
         </div>
 
 
-        <div class="field">
+        <div class="form-grupo">
 
             <label>
-                Personas
+                Cantidad de personas
             </label>
 
             <input
                 type="number"
-                id="personasEditar"
-                min="0">
+                id="editarPersonas"
+                min="0"
+                max="99">
 
         </div>
 
 
-        <div class="field">
+        <div class="form-grupo">
 
             <label>
                 Estado
             </label>
 
-            <select id="estadoEditar">
+            <select id="editarEstado">
 
                 <option value="confirmado">
                     Confirmado
@@ -871,183 +732,155 @@ td:first-child {
         </div>
 
 
-        <div class="modal-actions">
-
+        <div class="modal-botones">
 
             <button
-                class="modal-button cancel-button"
-                onclick="cerrarModal()">
-
+                class="btn-cancelar"
+                onclick="cerrarEditar()">
                 Cancelar
-
             </button>
-
 
             <button
-                class="modal-button save-button"
-                id="guardarBtn"
-                onclick="guardarCambios()">
-
-                Guardar
-
+                class="btn-guardar"
+                onclick="guardarEdicion()">
+                Guardar cambios
             </button>
-
 
         </div>
-
 
     </div>
 
 </div>
 
 
+<!-- =====================================================
+     MODAL ELIMINAR
+====================================================== -->
+
+<div
+    class="modal-fondo"
+    id="modalEliminar">
+
+    <div class="modal eliminar-modal">
+
+        <div class="icono-eliminar">
+            ♡
+        </div>
+
+        <h2>Eliminar invitado</h2>
+
+        <p id="textoEliminar">
+            ¿Querés eliminar esta respuesta?
+        </p>
+
+
+        <div class="modal-botones">
+
+            <button
+                class="btn-cancelar"
+                onclick="cerrarEliminar()">
+                Cancelar
+            </button>
+
+            <button
+                class="btn-eliminar-confirmar"
+                onclick="confirmarEliminar()">
+                Eliminar
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
 
 <script>
 
-
 /* =====================================================
-   URL
+   CONFIGURACIÓN
 ===================================================== */
 
 const SCRIPT_URL =
 "https://script.google.com/macros/s/AKfycbzjrfUcgu0RafzyAqLHOs7UbPneYO492QBNW7lETNyadxrtTcTYRO_SZGBom_k9ZZEM/exec";
 
 
-/* =====================================================
-   VARIABLES
-===================================================== */
-
 let invitados = [];
-
-let filaActual = null;
+let filaEditar = null;
+let filaEliminar = null;
 
 
 /* =====================================================
-   CARGAR
+   CARGAR INVITADOS
 ===================================================== */
 
-async function cargarInvitados() {
-
+async function cargarInvitados(){
 
     const tabla =
-        document.getElementById("tabla");
+        document.getElementById("tablaInvitados");
 
+    const conexion =
+        document.getElementById("conexion");
 
     tabla.innerHTML = `
-        <div class="loading">
-            Cargando respuestas...
-        </div>
+        <tr>
+            <td colspan="5">
+                <div class="cargando">
+                    Cargando respuestas...
+                </div>
+            </td>
+        </tr>
     `;
 
+    conexion.textContent =
+        "Conectando...";
 
-    try {
+    try{
 
-
-        const url =
-            SCRIPT_URL +
-            "?action=getInvitados&_=" +
-            Date.now();
-
-
-        const response =
-            await fetch(url, {
-                method: "GET",
-                cache: "no-store"
-            });
-
-
-        if (!response.ok) {
-
-            throw new Error(
-                "Error HTTP " +
-                response.status
+        const respuesta =
+            await fetch(
+                SCRIPT_URL + "?action=getInvitados&_=" + Date.now()
             );
 
-        }
-
-
-        const texto =
-            await response.text();
-
-
-        if (!texto) {
-
+        if(!respuesta.ok){
             throw new Error(
-                "Respuesta vacía"
+                "Error HTTP " + respuesta.status
             );
-
         }
 
+        const datos =
+            await respuesta.json();
 
-        invitados =
-            JSON.parse(texto);
-
-
-        if (!Array.isArray(invitados)) {
-
+        if(!Array.isArray(datos)){
             throw new Error(
-                "Formato incorrecto"
+                "La respuesta no es válida"
             );
-
         }
 
+        invitados = datos;
 
-        mostrarTabla();
+        mostrarInvitados();
 
-        calcularTotales();
+        conexion.textContent =
+            "Conectado · actualizado ahora";
 
+    }catch(error){
 
-        document.getElementById(
-            "connection"
-        ).innerHTML = `
-
-            <span
-                class="connection-dot">
-            </span>
-
-            Conectado · actualizado ahora
-
-        `;
-
-
-    }
-    catch(error) {
-
-
-        console.error(
-            "Error cargando invitados:",
-            error
-        );
-
-
-        document.getElementById(
-            "connection"
-        ).innerHTML = `
-
-            <span
-                class="connection-dot"
-                style="background:#b66">
-            </span>
-
-            Error de conexión
-
-        `;
-
+        console.error(error);
 
         tabla.innerHTML = `
-
-            <div class="empty">
-
-                No se pudieron cargar las respuestas.
-
-                <br><br>
-
-                Revisá la conexión con Google y
-                tocá "Actualizar respuestas".
-
-            </div>
-
+            <tr>
+                <td colspan="5">
+                    <div class="error">
+                        No se pudieron cargar las respuestas.<br>
+                        Tocá "Actualizar respuestas" para intentar nuevamente.
+                    </div>
+                </td>
+            </tr>
         `;
+
+        conexion.textContent =
+            "No se pudo conectar con el servidor.";
 
     }
 
@@ -1055,249 +888,177 @@ async function cargarInvitados() {
 
 
 /* =====================================================
-   MOSTRAR TABLA
+   MOSTRAR INVITADOS
 ===================================================== */
 
-function mostrarTabla() {
-
+function mostrarInvitados(){
 
     const tabla =
-        document.getElementById("tabla");
-
-
-    if (
-        !invitados ||
-        invitados.length === 0
-    ) {
-
-        tabla.innerHTML = `
-
-            <div class="empty">
-
-                No hay respuestas todavía.
-
-            </div>
-
-        `;
-
-        return;
-
-    }
-
-
-    let html = `
-
-        <table>
-
-            <thead>
-
-                <tr>
-
-                    <th>
-                        Invitado
-                    </th>
-
-                    <th>
-                        Personas
-                    </th>
-
-                    <th>
-                        Estado
-                    </th>
-
-                    <th>
-                        Acciones
-                    </th>
-
-                </tr>
-
-            </thead>
-
-            <tbody>
-
-    `;
-
-
-    invitados.forEach(function(inv) {
-
-
-        const estado =
-            normalizarEstado(
-                inv.estado
-            );
-
-
-        let texto =
-            "Pendiente";
-
-
-        if (
-            estado === "confirmado"
-        ) {
-
-            texto =
-                "Confirmado";
-
-        }
-
-
-        if (
-            estado === "no"
-        ) {
-
-            texto =
-                "No asiste";
-
-        }
-
-
-        html += `
-
-            <tr>
-
-                <td>
-                    ${escaparHTML(inv.nombre)}
-                </td>
-
-                <td>
-                    ${Number(inv.personas) || 0}
-                </td>
-
-                <td>
-
-                    <span
-                        class="status ${estado}">
-
-                        ${texto}
-
-                    </span>
-
-                </td>
-
-                <td>
-
-                    <div class="actions">
-
-
-                        <button
-                            class="action-btn edit-btn"
-                            onclick="editarInvitado(${Number(inv.fila)})">
-
-                            ✏️ Editar
-
-                        </button>
-
-
-                        <button
-                            class="action-btn delete-btn"
-                            onclick="eliminarInvitado(${Number(inv.fila)})">
-
-                            🗑️ Eliminar
-
-                        </button>
-
-
-                    </div>
-
-                </td>
-
-            </tr>
-
-        `;
-
-    });
-
-
-    html += `
-
-            </tbody>
-
-        </table>
-
-    `;
-
-
-    tabla.innerHTML =
-        html;
-
-}
-
-
-/* =====================================================
-   TOTALES
-===================================================== */
-
-function calcularTotales() {
-
+        document.getElementById("tablaInvitados");
 
     let confirmados = 0;
-
     let personas = 0;
-
-    let no = 0;
-
+    let noAsisten = 0;
     let pendientes = 0;
 
 
-    invitados.forEach(function(inv) {
+    if(!invitados.length){
+
+        tabla.innerHTML = `
+            <tr>
+                <td colspan="5">
+                    <div class="cargando">
+                        Todavía no hay respuestas.
+                    </div>
+                </td>
+            </tr>
+        `;
+
+    }else{
+
+        tabla.innerHTML =
+            invitados.map((invitado, indice) => {
+
+                const estado =
+                    String(
+                        invitado.estado || "pendiente"
+                    ).toLowerCase();
+
+                if(estado === "confirmado"){
+
+                    confirmados++;
+                    personas +=
+                        Number(invitado.personas) || 0;
+
+                }
+
+                else if(
+                    estado === "no" ||
+                    estado === "no asiste" ||
+                    estado === "no_asiste"
+                ){
+
+                    noAsisten++;
+
+                }
+
+                else{
+
+                    pendientes++;
+
+                }
 
 
-        const estado =
-            normalizarEstado(
-                inv.estado
-            );
+                let textoEstado =
+                    "Pendiente";
+
+                let claseEstado =
+                    "pendiente";
 
 
-        const cantidad =
-            Number(inv.personas) || 0;
+                if(estado === "confirmado"){
+
+                    textoEstado =
+                        "Confirmado";
+
+                    claseEstado =
+                        "confirmado";
+
+                }
+
+                else if(
+                    estado === "no" ||
+                    estado === "no asiste" ||
+                    estado === "no_asiste"
+                ){
+
+                    textoEstado =
+                        "No asiste";
+
+                    claseEstado =
+                        "no";
+
+                }
 
 
-        if (
-            estado === "confirmado"
-        ) {
+                return `
 
-            confirmados++;
+                    <tr>
 
-            personas += cantidad;
+                        <td>
 
-        }
-        else if (
-            estado === "no"
-        ) {
+                            <div class="nombre">
+                                ${escaparHTML(invitado.nombre)}
+                            </div>
 
-            no++;
-
-        }
-        else {
-
-            pendientes++;
-
-        }
-
-    });
+                        </td>
 
 
-    document.getElementById(
-        "totalConfirmados"
-    ).textContent =
+                        <td>
+                            ${Number(invitado.personas) || 0}
+                        </td>
+
+
+                        <td>
+
+                            <span class="estado ${claseEstado}">
+                                ${textoEstado}
+                            </span>
+
+                        </td>
+
+
+                        <td>
+
+                            <div class="fecha">
+                                ${formatearFecha(invitado.fecha)}
+                            </div>
+
+                        </td>
+
+
+                        <td>
+
+                            <div class="acciones">
+
+                                <button
+                                    class="btn-accion btn-editar"
+                                    title="Editar"
+                                    onclick="abrirEditar(${indice})">
+                                    ✏️
+                                </button>
+
+
+                                <button
+                                    class="btn-accion btn-eliminar"
+                                    title="Eliminar"
+                                    onclick="abrirEliminar(${indice})">
+                                    🗑️
+                                </button>
+
+                            </div>
+
+                        </td>
+
+                    </tr>
+
+                `;
+
+            }).join("");
+
+    }
+
+
+    document.getElementById("confirmados").textContent =
         confirmados;
 
-
-    document.getElementById(
-        "totalPersonas"
-    ).textContent =
+    document.getElementById("personas").textContent =
         personas;
 
+    document.getElementById("noAsisten").textContent =
+        noAsisten;
 
-    document.getElementById(
-        "totalNo"
-    ).textContent =
-        no;
-
-
-    document.getElementById(
-        "totalPendientes"
-    ).textContent =
+    document.getElementById("pendientes").textContent =
         pendientes;
 
 }
@@ -1307,86 +1068,58 @@ function calcularTotales() {
    EDITAR
 ===================================================== */
 
-function editarInvitado(fila) {
-
+function abrirEditar(indice){
 
     const invitado =
-        invitados.find(function(inv) {
+        invitados[indice];
 
-            return Number(inv.fila) ===
-                   Number(fila);
+    if(!invitado) return;
 
-        });
-
-
-    if (!invitado) {
-
-        alert(
-            "No se encontró el invitado."
-        );
-
-        return;
-
-    }
+    filaEditar =
+        invitado.fila;
 
 
-    filaActual =
-        Number(fila);
-
-
-    document.getElementById(
-        "nombreEditar"
-    ).value =
+    document.getElementById("editarNombre").value =
         invitado.nombre || "";
 
+    document.getElementById("editarPersonas").value =
+        Number(invitado.personas) || 0;
 
-    document.getElementById(
-        "personasEditar"
-    ).value =
-        Number(
-            invitado.personas
-        ) || 0;
+    document.getElementById("editarEstado").value =
+        normalizarEstado(invitado.estado);
 
 
-    document.getElementById(
-        "estadoEditar"
-    ).value =
-        normalizarEstado(
-            invitado.estado
-        );
-
-
-    document.getElementById(
-        "modal"
-    ).classList.add("visible");
+    document
+        .getElementById("modalEditar")
+        .classList.add("activo");
 
 }
 
 
 /* =====================================================
-   CERRAR
+   CERRAR EDITAR
 ===================================================== */
 
-function cerrarModal() {
+function cerrarEditar(){
 
-    document.getElementById(
-        "modal"
-    ).classList.remove("visible");
+    filaEditar = null;
 
-    filaActual =
-        null;
+    document
+        .getElementById("modalEditar")
+        .classList.remove("activo");
 
 }
 
 
 /* =====================================================
-   GUARDAR
+   GUARDAR EDICIÓN
 ===================================================== */
 
-async function guardarCambios() {
+async function guardarEdicion(){
 
+    if(!filaEditar){
 
-    if (!filaActual) {
+        alert("No se encontró la fila.");
 
         return;
 
@@ -1394,28 +1127,29 @@ async function guardarCambios() {
 
 
     const nombre =
-        document.getElementById(
-            "nombreEditar"
-        ).value.trim();
+        document
+            .getElementById("editarNombre")
+            .value
+            .trim();
 
 
     const personas =
-        document.getElementById(
-            "personasEditar"
-        ).value;
+        Number(
+            document
+                .getElementById("editarPersonas")
+                .value
+        ) || 0;
 
 
     const estado =
-        document.getElementById(
-            "estadoEditar"
-        ).value;
+        document
+            .getElementById("editarEstado")
+            .value;
 
 
-    if (!nombre) {
+    if(!nombre){
 
-        alert(
-            "Ingresá el nombre."
-        );
+        alert("Ingresá el nombre del invitado.");
 
         return;
 
@@ -1423,8 +1157,8 @@ async function guardarCambios() {
 
 
     const boton =
-        document.getElementById(
-            "guardarBtn"
+        document.querySelector(
+            "#modalEditar .btn-guardar"
         );
 
 
@@ -1434,36 +1168,38 @@ async function guardarCambios() {
         "Guardando...";
 
 
-    try {
+    try{
 
+        /*
+         * IMPORTANTE:
+         * Enviamos parámetros normales,
+         * no JSON.
+         * Esto coincide con e.parameter
+         * de Código.gs.
+         */
 
         const datos =
             new URLSearchParams();
-
 
         datos.append(
             "action",
             "editar"
         );
 
-
         datos.append(
             "fila",
-            String(filaActual)
+            filaEditar
         );
-
 
         datos.append(
             "nombre",
             nombre
         );
 
-
         datos.append(
             "personas",
-            String(personas)
+            personas
         );
-
 
         datos.append(
             "estado",
@@ -1471,53 +1207,46 @@ async function guardarCambios() {
         );
 
 
-        /*
-         * NO usamos mode:no-cors acá.
-         * El navegador enviará el formulario
-         * al Apps Script.
-         */
-
         await fetch(
             SCRIPT_URL,
             {
-                method: "POST",
-                body: datos
+                method:"POST",
+                mode:"no-cors",
+                body:datos
             }
         );
 
 
-        cerrarModal();
+        cerrarEditar();
 
 
         /*
-         * Esperamos que Google termine
-         * de guardar y volvemos a leer.
+         * Esperamos un momento para que
+         * Google termine de guardar.
          */
 
         setTimeout(
             cargarInvitados,
-            1000
+            900
         );
 
 
-    }
-    catch(error) {
-
+    }catch(error){
 
         console.error(error);
-
 
         alert(
             "No se pudo guardar el cambio."
         );
 
+    }finally{
+
+        boton.disabled = false;
+
+        boton.textContent =
+            "Guardar cambios";
+
     }
-
-
-    boton.disabled = false;
-
-    boton.textContent =
-        "Guardar";
 
 }
 
@@ -1526,84 +1255,121 @@ async function guardarCambios() {
    ELIMINAR
 ===================================================== */
 
-async function eliminarInvitado(fila) {
-
+function abrirEliminar(indice){
 
     const invitado =
-        invitados.find(function(inv) {
+        invitados[indice];
 
-            return Number(inv.fila) ===
-                   Number(fila);
+    if(!invitado) return;
 
-        });
+    filaEliminar =
+        invitado.fila;
 
 
-    if (!invitado) {
+    document.getElementById("textoEliminar").textContent =
+        "¿Querés eliminar la respuesta de " +
+        invitado.nombre +
+        "?";
+
+
+    document
+        .getElementById("modalEliminar")
+        .classList.add("activo");
+
+}
+
+
+/* =====================================================
+   CERRAR ELIMINAR
+===================================================== */
+
+function cerrarEliminar(){
+
+    filaEliminar = null;
+
+    document
+        .getElementById("modalEliminar")
+        .classList.remove("activo");
+
+}
+
+
+/* =====================================================
+   CONFIRMAR ELIMINACIÓN
+===================================================== */
+
+async function confirmarEliminar(){
+
+    if(!filaEliminar){
+
+        alert("No se encontró la fila.");
 
         return;
 
     }
 
 
-    const confirmar =
-        confirm(
-            "¿Eliminar a " +
-            invitado.nombre +
-            " de la lista?"
+    const boton =
+        document.querySelector(
+            "#modalEliminar .btn-eliminar-confirmar"
         );
 
 
-    if (!confirmar) {
+    boton.disabled = true;
 
-        return;
+    boton.textContent =
+        "Eliminando...";
 
-    }
 
-
-    try {
-
+    try{
 
         const datos =
             new URLSearchParams();
-
 
         datos.append(
             "action",
             "eliminar"
         );
 
-
         datos.append(
             "fila",
-            String(fila)
+            filaEliminar
         );
 
 
         await fetch(
             SCRIPT_URL,
             {
-                method: "POST",
-                body: datos
+                method:"POST",
+                mode:"no-cors",
+                body:datos
             }
         );
 
 
+        cerrarEliminar();
+
+
         setTimeout(
             cargarInvitados,
-            1000
+            900
         );
 
 
-    }
-    catch(error) {
-
+    }catch(error){
 
         console.error(error);
 
-
         alert(
-            "No se pudo eliminar."
+            "No se pudo eliminar la respuesta."
         );
+
+    }finally{
+
+        boton.disabled = false;
+
+        boton.textContent =
+            "Eliminar";
 
     }
 
@@ -1611,36 +1377,28 @@ async function eliminarInvitado(fila) {
 
 
 /* =====================================================
-   ESTADO
+   NORMALIZAR ESTADO
 ===================================================== */
 
-function normalizarEstado(estado) {
+function normalizarEstado(estado){
 
-
-    const valor =
+    estado =
         String(
-            estado || ""
-        )
-        .trim()
-        .toLowerCase();
+            estado || "pendiente"
+        ).toLowerCase();
 
 
-    if (
-        valor === "confirmado"
-    ) {
-
+    if(estado === "confirmado"){
         return "confirmado";
-
     }
 
 
-    if (
-        valor === "no" ||
-        valor === "no asiste"
-    ) {
-
+    if(
+        estado === "no" ||
+        estado === "no asiste" ||
+        estado === "no_asiste"
+    ){
         return "no";
-
     }
 
 
@@ -1650,84 +1408,104 @@ function normalizarEstado(estado) {
 
 
 /* =====================================================
-   SEGURIDAD
+   FORMATEAR FECHA
 ===================================================== */
 
-function escaparHTML(texto) {
+function formatearFecha(fecha){
+
+    if(!fecha){
+        return "—";
+    }
 
 
-    return String(
-        texto ?? ""
-    )
+    try{
 
-    .replace(
-        /&/g,
-        "&amp;"
-    )
+        const d =
+            new Date(fecha);
 
-    .replace(
-        /</g,
-        "&lt;"
-    )
 
-    .replace(
-        />/g,
-        "&gt;"
-    )
+        if(isNaN(d.getTime())){
+            return String(fecha);
+        }
 
-    .replace(
-        /"/g,
-        "&quot;"
-    )
 
-    .replace(
-        /'/g,
-        "&#039;"
-    );
+        return d.toLocaleString(
+            "es-AR",
+            {
+                day:"2-digit",
+                month:"2-digit",
+                year:"numeric",
+                hour:"2-digit",
+                minute:"2-digit"
+            }
+        );
+
+    }catch(error){
+
+        return String(fecha);
+
+    }
 
 }
 
 
 /* =====================================================
-   CERRAR MODAL AFUERA
+   SEGURIDAD HTML
 ===================================================== */
 
-document.getElementById(
-    "modal"
-).addEventListener(
-    "click",
-    function(event) {
+function escaparHTML(texto){
 
-        if (
-            event.target === this
-        ) {
+    return String(
+        texto ?? ""
+    )
+    .replace(/&/g,"&amp;")
+    .replace(/</g,"&lt;")
+    .replace(/>/g,"&gt;")
+    .replace(/"/g,"&quot;")
+    .replace(/'/g,"&#039;");
 
-            cerrarModal();
-
-        }
-
-    }
-);
+}
 
 
 /* =====================================================
-   INICIO
+   CERRAR MODALES AL TOCAR AFUERA
+===================================================== */
+
+document
+    .getElementById("modalEditar")
+    .addEventListener(
+        "click",
+        function(e){
+
+            if(e.target === this){
+                cerrarEditar();
+            }
+
+        }
+    );
+
+
+document
+    .getElementById("modalEliminar")
+    .addEventListener(
+        "click",
+        function(e){
+
+            if(e.target === this){
+                cerrarEliminar();
+            }
+
+        }
+    );
+
+
+/* =====================================================
+   INICIAR
 ===================================================== */
 
 cargarInvitados();
 
-
-/* =====================================================
-   ACTUALIZAR CADA 30 SEGUNDOS
-===================================================== */
-
-setInterval(
-    cargarInvitados,
-    30000
-);
-
 </script>
-
 
 </body>
 </html>

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
 
 <meta charset="UTF-8">
@@ -10,53 +9,21 @@
 
 <title>Tamy & Thiago | Panel</title>
 
+<link rel="preconnect"
+      href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet">
+
+
 <style>
 
-/* =====================================================
-   BASE
-===================================================== */
-
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
-
-:root {
-
-    --fondo: #f8f5f2;
-    --blanco: rgba(255,255,255,.90);
-
-    --texto: #514a48;
-    --suave: #8d8581;
-
-    --rosa: #c9a5aa;
-    --rosa-claro: #eadbdd;
-
-    --verde: #819b8a;
-    --verde-claro: #e0e9e2;
-
-    --rojo: #b77d7d;
-    --rojo-claro: #f0dddd;
-
-    --dorado: #b69b72;
-
-    --borde: rgba(120,100,90,.15);
-
-}
-
-
-/* =====================================================
-   RESET
-===================================================== */
-
 * {
-
     box-sizing: border-box;
-
-}
-
-
-html {
-
-    scroll-behavior: smooth;
-
 }
 
 
@@ -66,76 +33,17 @@ body {
 
     min-height: 100vh;
 
-    color: var(--texto);
-
-    font-family: 'Montserrat', sans-serif;
-
     background:
-
         radial-gradient(
-            circle at 10% 5%,
-            rgba(201,165,170,.18),
-            transparent 30%
-        ),
-
-        radial-gradient(
-            circle at 90% 15%,
-            rgba(182,155,114,.13),
-            transparent 30%
-        ),
-
-        linear-gradient(
-            180deg,
-            #faf7f4 0%,
-            #f6f1ee 100%
+            circle at top,
+            #fffdfb 0%,
+            #f8f0ec 45%,
+            #f4e9e5 100%
         );
 
-}
+    color: #5e4b4b;
 
-
-/* =====================================================
-   DECORACIÓN DE FONDO
-===================================================== */
-
-body::before {
-
-    content: "";
-
-    position: fixed;
-
-    width: 260px;
-    height: 260px;
-
-    border-radius: 50%;
-
-    border: 1px solid rgba(182,155,114,.14);
-
-    top: -130px;
-    left: -130px;
-
-    pointer-events: none;
-
-}
-
-
-body::after {
-
-    content: "";
-
-    position: fixed;
-
-    width: 300px;
-    height: 300px;
-
-    border-radius: 50%;
-
-    border: 1px solid rgba(201,165,170,.13);
-
-    right: -160px;
-    bottom: -160px;
-
-    pointer-events: none;
-
+    font-family: "Montserrat", sans-serif;
 }
 
 
@@ -143,14 +51,15 @@ body::after {
    CONTENEDOR
 ===================================================== */
 
-.contenedor {
+.container {
 
-    width: min(1120px, 92%);
+    width: 92%;
+
+    max-width: 1100px;
 
     margin: auto;
 
     padding: 45px 0 60px;
-
 }
 
 
@@ -158,97 +67,59 @@ body::after {
    ENCABEZADO
 ===================================================== */
 
-.encabezado {
+.header {
 
     text-align: center;
 
     margin-bottom: 35px;
-
 }
 
 
-.marca {
+.header .small {
 
-    color: var(--dorado);
-
-    font-size: 10px;
+    font-size: 11px;
 
     letter-spacing: 4px;
 
-    text-transform: uppercase;
+    color: #b18b83;
 
-    margin-bottom: 12px;
-
+    margin-bottom: 8px;
 }
 
 
-h1 {
+.header h1 {
 
     margin: 0;
 
-    font-family: 'Cormorant Garamond', serif;
+    font-family: "Cormorant Garamond", serif;
 
-    font-size: clamp(48px, 7vw, 72px);
+    font-size: 55px;
 
-    line-height: .95;
+    font-weight: 600;
 
-    font-weight: 500;
-
-    letter-spacing: .5px;
-
+    color: #73585b;
 }
 
 
-.subtitulo {
+.header .subtitle {
 
-    margin-top: 12px;
-
-    color: var(--suave);
-
-    font-size: 10px;
-
-    letter-spacing: 3px;
-
-    text-transform: uppercase;
-
-}
-
-
-.decoracion {
-
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    gap: 12px;
-
-    margin: 18px 0;
-
-}
-
-
-.decoracion::before,
-.decoracion::after {
-
-    content: "";
-
-    width: 60px;
-
-    height: 1px;
-
-    background: var(--rosa);
-
-}
-
-
-.decoracion span {
-
-    color: var(--dorado);
+    margin-top: 5px;
 
     font-size: 14px;
 
+    letter-spacing: 2px;
+
+    color: #a88b8c;
+}
+
+
+.header .symbol {
+
+    font-size: 20px;
+
+    margin-top: 12px;
+
+    color: #b8958f;
 }
 
 
@@ -256,272 +127,170 @@ h1 {
    TARJETAS
 ===================================================== */
 
-.resumen {
+.stats {
 
     display: grid;
 
     grid-template-columns:
         repeat(4, 1fr);
 
-    gap: 15px;
+    gap: 16px;
 
-    margin-bottom: 28px;
-
+    margin-bottom: 35px;
 }
 
 
-.tarjeta {
+.stat {
 
-    background: var(--blanco);
+    background: rgba(255,255,255,.75);
 
-    border: 1px solid var(--borde);
+    border: 1px solid #eadbd6;
 
-    border-radius: 20px;
+    border-radius: 18px;
 
     padding: 23px 15px;
 
     text-align: center;
 
     box-shadow:
-        0 12px 35px rgba(80,60,50,.055);
-
-    backdrop-filter: blur(8px);
-
-    transition: transform .25s ease;
-
+        0 8px 25px rgba(120,90,80,.07);
 }
 
 
-.tarjeta:hover {
+.stat-icon {
 
-    transform: translateY(-3px);
-
-}
-
-
-.icono {
-
-    font-size: 18px;
-
-    margin-bottom: 8px;
-
-}
-
-
-.numero {
-
-    font-family: 'Cormorant Garamond', serif;
-
-    font-size: 43px;
-
-    line-height: 1;
+    font-size: 20px;
 
     margin-bottom: 7px;
 
+    color: #b28d89;
 }
 
 
-.etiqueta {
+.stat-number {
 
-    color: var(--suave);
+    font-family: "Cormorant Garamond", serif;
 
-    font-size: 9px;
+    font-size: 39px;
 
-    letter-spacing: 1.5px;
+    font-weight: 600;
+
+    color: #74595c;
+}
+
+
+.stat-label {
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
 
     text-transform: uppercase;
 
-}
-
-
-.card-confirmados .numero {
-
-    color: var(--verde);
-
-}
-
-
-.card-personas .numero {
-
-    color: var(--dorado);
-
-}
-
-
-.card-no .numero {
-
-    color: var(--rojo);
-
-}
-
-
-.card-pendientes .numero {
-
-    color: var(--rosa);
-
+    color: #9c8585;
 }
 
 
 /* =====================================================
-   BLOQUE PRINCIPAL
+   PANEL PRINCIPAL
 ===================================================== */
 
-.seccion {
+.card {
 
-    background: var(--blanco);
+    background: rgba(255,255,255,.84);
 
-    border: 1px solid var(--borde);
+    border: 1px solid #eadbd6;
 
     border-radius: 22px;
 
-    padding: 27px;
+    padding: 28px;
 
     box-shadow:
-        0 12px 40px rgba(80,60,50,.055);
-
-    backdrop-filter: blur(8px);
-
+        0 12px 35px rgba(120,90,80,.08);
 }
 
 
-.titulo {
-
-    text-align: center;
-
-    margin-bottom: 22px;
-
-}
-
-
-.titulo-mini {
-
-    color: var(--dorado);
-
-    font-size: 9px;
-
-    letter-spacing: 3px;
-
-    text-transform: uppercase;
-
-}
-
-
-.titulo h2 {
-
-    margin: 6px 0 0;
-
-    font-family: 'Cormorant Garamond', serif;
-
-    font-size: 35px;
-
-    font-weight: 500;
-
-}
-
-
-/* =====================================================
-   BARRA SUPERIOR
-===================================================== */
-
-.controles {
+.card-header {
 
     display: flex;
 
-    justify-content: center;
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 15px;
 
     margin-bottom: 22px;
-
 }
 
 
-.boton {
+.card-title {
 
-    border: 1px solid var(--rosa);
+    font-family: "Cormorant Garamond", serif;
 
-    background: transparent;
+    font-size: 32px;
 
-    color: var(--texto);
+    color: #73585b;
 
-    border-radius: 30px;
-
-    padding: 11px 23px;
-
-    font-family: 'Montserrat', sans-serif;
-
-    font-size: 10px;
-
-    letter-spacing: 1px;
-
-    cursor: pointer;
-
-    transition: .25s ease;
-
+    margin: 0;
 }
 
 
-.boton:hover {
+.connection {
 
-    background: var(--rosa-claro);
+    font-size: 11px;
 
+    color: #8c7777;
 }
 
 
-.boton:disabled {
+.connection span {
 
-    opacity: .55;
+    display: inline-block;
 
-    cursor: wait;
+    width: 8px;
 
+    height: 8px;
+
+    background: #8ea58c;
+
+    border-radius: 50%;
+
+    margin-right: 5px;
 }
 
 
 /* =====================================================
-   ESTADO DE CONEXIÓN
+   BOTÓN ACTUALIZAR
 ===================================================== */
 
-.conexion {
+.refresh {
 
-    text-align: center;
+    border: 1px solid #d8c0ba;
 
-    margin-bottom: 18px;
+    background: #fffaf8;
 
-    font-size: 9px;
+    color: #765c5d;
 
-    letter-spacing: 1px;
+    border-radius: 30px;
 
-    color: var(--suave);
+    padding: 10px 18px;
 
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 11px;
+
+    cursor: pointer;
+
+    transition: .2s;
 }
 
 
-.punto {
+.refresh:hover {
 
-    display: inline-block;
+    background: #f5e9e5;
 
-    width: 7px;
-
-    height: 7px;
-
-    border-radius: 50%;
-
-    background: var(--dorado);
-
-    margin-right: 6px;
-
-}
-
-
-.punto.ok {
-
-    background: var(--verde);
-
-}
-
-
-.punto.error {
-
-    background: var(--rojo);
-
+    transform: translateY(-1px);
 }
 
 
@@ -529,10 +298,9 @@ h1 {
    TABLA
 ===================================================== */
 
-.tabla-wrapper {
+.table-wrap {
 
     overflow-x: auto;
-
 }
 
 
@@ -542,52 +310,43 @@ table {
 
     border-collapse: collapse;
 
+    min-width: 650px;
 }
 
 
-thead th {
-
-    padding: 13px 10px;
-
-    border-bottom: 1px solid var(--borde);
-
-    color: var(--suave);
-
-    font-size: 9px;
-
-    letter-spacing: 1.5px;
-
-    text-transform: uppercase;
-
-    font-weight: 500;
+th {
 
     text-align: left;
 
+    font-size: 10px;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    color: #9d8585;
+
+    padding: 13px 12px;
+
+    border-bottom: 1px solid #eadbd6;
 }
 
 
-tbody td {
+td {
 
-    padding: 15px 10px;
+    padding: 16px 12px;
 
-    border-bottom: 1px solid rgba(120,100,90,.08);
+    border-bottom: 1px solid #f0e5e1;
 
     font-size: 13px;
 
+    color: #665454;
 }
 
 
-tbody tr:last-child td {
+td:first-child {
 
-    border-bottom: none;
-
-}
-
-
-.nombre {
-
-    font-weight: 500;
-
+    font-weight: 600;
 }
 
 
@@ -595,162 +354,346 @@ tbody tr:last-child td {
    ESTADOS
 ===================================================== */
 
-.estado {
+.status {
 
     display: inline-block;
 
-    padding: 6px 12px;
+    padding: 6px 11px;
 
-    border-radius: 30px;
+    border-radius: 20px;
 
-    font-size: 9px;
+    font-size: 10px;
 
-    letter-spacing: .5px;
+    font-weight: 600;
+
+    text-transform: capitalize;
+}
+
+
+.status.confirmado {
+
+    background: #e8f0e5;
+
+    color: #62785e;
+}
+
+
+.status.no {
+
+    background: #f3e3e0;
+
+    color: #9a6863;
+}
+
+
+.status.pendiente {
+
+    background: #f1ece2;
+
+    color: #8c795c;
+}
+
+
+/* =====================================================
+   BOTONES DE ACCIÓN
+===================================================== */
+
+.actions {
+
+    display: flex;
+
+    gap: 7px;
+
+    flex-wrap: wrap;
+}
+
+
+.btn {
+
+    border: none;
+
+    border-radius: 20px;
+
+    padding: 7px 11px;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 10px;
+
+    cursor: pointer;
+
+    transition: .2s;
+}
+
+
+.btn:hover {
+
+    transform: translateY(-1px);
+}
+
+
+.btn-edit {
+
+    background: #eee3df;
+
+    color: #765d5d;
+}
+
+
+.btn-delete {
+
+    background: #f4e2df;
+
+    color: #98645f;
+}
+
+
+/* =====================================================
+   SIN RESULTADOS
+===================================================== */
+
+.empty {
+
+    text-align: center;
+
+    padding: 35px 15px;
+
+    color: #a18d8d;
+
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   MODAL
+===================================================== */
+
+.modal-bg {
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(65,45,45,.45);
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+    z-index: 1000;
+}
+
+
+.modal-bg.show {
+
+    display: flex;
+}
+
+
+.modal {
+
+    width: 100%;
+
+    max-width: 430px;
+
+    background: #fffaf8;
+
+    border-radius: 22px;
+
+    padding: 30px;
+
+    box-shadow:
+        0 20px 60px rgba(60,40,40,.2);
+}
+
+
+.modal h2 {
+
+    margin: 0 0 20px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 32px;
+
+    color: #73585b;
+}
+
+
+.form-group {
+
+    margin-bottom: 15px;
+}
+
+
+.form-group label {
+
+    display: block;
+
+    font-size: 10px;
 
     text-transform: uppercase;
 
+    letter-spacing: 1px;
+
+    color: #9b8383;
+
+    margin-bottom: 6px;
 }
 
 
-.estado-confirmado {
+.form-group input,
+.form-group select {
 
-    color: #5d7d68;
+    width: 100%;
 
-    background: var(--verde-claro);
+    padding: 12px 13px;
 
-}
+    border: 1px solid #dfceca;
 
+    border-radius: 12px;
 
-.estado-no {
+    background: white;
 
-    color: #9a6262;
+    color: #5e4b4b;
 
-    background: var(--rojo-claro);
-
-}
-
-
-.estado-pendiente {
-
-    color: #9a7d4e;
-
-    background: #eee5d2;
-
-}
-
-
-/* =====================================================
-   MENSAJE
-===================================================== */
-
-.mensaje {
-
-    padding: 35px 20px;
-
-    text-align: center;
-
-    color: var(--suave);
+    font-family: "Montserrat", sans-serif;
 
     font-size: 13px;
 
+    outline: none;
+}
+
+
+.form-group input:focus,
+.form-group select:focus {
+
+    border-color: #b8958f;
+}
+
+
+.modal-buttons {
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 9px;
+
+    margin-top: 22px;
+}
+
+
+.modal-btn {
+
+    border: none;
+
+    border-radius: 20px;
+
+    padding: 10px 18px;
+
+    cursor: pointer;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 11px;
+}
+
+
+.cancel {
+
+    background: #eee6e3;
+
+    color: #765d5d;
+}
+
+
+.save {
+
+    background: #8e706f;
+
+    color: white;
 }
 
 
 /* =====================================================
-   FOOTER
+   LOADING
 ===================================================== */
 
-.footer {
+.loading {
 
     text-align: center;
 
-    margin-top: 25px;
+    padding: 30px;
 
-    color: var(--suave);
+    color: #9a8585;
 
-    font-size: 9px;
-
-    letter-spacing: 1.5px;
-
-}
-
-
-.footer span {
-
-    color: var(--dorado);
-
+    font-size: 12px;
 }
 
 
 /* =====================================================
-   CELULAR
+   RESPONSIVE
 ===================================================== */
 
-@media (max-width: 750px) {
+@media(max-width: 800px) {
 
-    .contenedor {
+    .stats {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .header h1 {
+
+        font-size: 45px;
+    }
+
+    .card-header {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+}
+
+
+@media(max-width: 500px) {
+
+    .container {
 
         width: 94%;
 
         padding-top: 30px;
-
     }
 
-
-    .resumen {
-
-        grid-template-columns:
-            repeat(2, 1fr);
+    .stats {
 
         gap: 10px;
-
     }
 
+    .stat {
 
-    .tarjeta {
-
-        padding: 18px 10px;
-
+        padding: 18px 8px;
     }
 
+    .stat-number {
 
-    .seccion {
+        font-size: 32px;
+    }
+
+    .card {
 
         padding: 18px;
-
     }
 
+    .header h1 {
 
-    thead th,
-    tbody td {
-
-        white-space: nowrap;
-
-    }
-
-}
-
-
-@media (max-width: 430px) {
-
-    h1 {
-
-        font-size: 46px;
-
-    }
-
-
-    .numero {
-
-        font-size: 36px;
-
-    }
-
-
-    .titulo h2 {
-
-        font-size: 30px;
-
+        font-size: 40px;
     }
 
 }
@@ -763,221 +706,172 @@ tbody tr:last-child td {
 <body>
 
 
-<div class="contenedor">
+<div class="container">
 
 
     <!-- =================================================
          ENCABEZADO
     ================================================== -->
 
-    <header class="encabezado">
+    <header class="header">
 
-        <div class="marca">
+        <div class="small">
             NOVA INVITE PRESENTA
         </div>
-
 
         <h1>
             Tamy & Thiago
         </h1>
 
-
-        <div class="decoracion">
-            <span>✦</span>
+        <div class="subtitle">
+            Panel de organización
         </div>
 
-
-        <div class="subtitulo">
-            Panel de organización
+        <div class="symbol">
+            ♡
         </div>
 
     </header>
 
 
+
     <!-- =================================================
-         RESUMEN
+         ESTADÍSTICAS
     ================================================== -->
 
-    <section class="resumen">
+    <section class="stats">
 
 
-        <div class="tarjeta card-confirmados">
+        <div class="stat">
 
-            <div class="icono">
+            <div class="stat-icon">
                 ♡
             </div>
 
             <div
-                class="numero"
+                class="stat-number"
                 id="confirmados">
-
                 0
-
             </div>
 
-            <div class="etiqueta">
+            <div class="stat-label">
                 Confirmados
             </div>
 
         </div>
 
 
-        <div class="tarjeta card-personas">
 
-            <div class="icono">
+        <div class="stat">
+
+            <div class="stat-icon">
                 ♡
             </div>
 
             <div
-                class="numero"
+                class="stat-number"
                 id="personas">
-
                 0
-
             </div>
 
-            <div class="etiqueta">
+            <div class="stat-label">
                 Personas
             </div>
 
         </div>
 
 
-        <div class="tarjeta card-no">
 
-            <div class="icono">
+        <div class="stat">
+
+            <div class="stat-icon">
                 ×
             </div>
 
             <div
-                class="numero"
-                id="no">
-
+                class="stat-number"
+                id="noAsisten">
                 0
-
             </div>
 
-            <div class="etiqueta">
+            <div class="stat-label">
                 No asisten
             </div>
 
         </div>
 
 
-        <div class="tarjeta card-pendientes">
 
-            <div class="icono">
+        <div class="stat">
+
+            <div class="stat-icon">
                 ◌
             </div>
 
             <div
-                class="numero"
+                class="stat-number"
                 id="pendientes">
-
                 0
-
             </div>
 
-            <div class="etiqueta">
+            <div class="stat-label">
                 Pendientes
             </div>
 
         </div>
 
-
     </section>
+
 
 
     <!-- =================================================
          LISTA
     ================================================== -->
 
-    <section class="seccion">
+    <section class="card">
 
 
-        <div class="titulo">
+        <div class="card-header">
 
-            <div class="titulo-mini">
-                Respuestas recibidas
+
+            <div>
+
+                <h2 class="card-title">
+                    Lista de invitados
+                </h2>
+
+                <div
+                    class="connection"
+                    id="connection">
+
+                    <span></span>
+                    Conectando...
+
+                </div>
+
             </div>
 
-            <h2>
-                Lista de invitados
-            </h2>
-
-        </div>
-
-
-        <div class="conexion">
-
-            <span
-                class="punto"
-                id="punto">
-            </span>
-
-            <span id="conexionTexto">
-                Conectando con el panel...
-            </span>
-
-        </div>
-
-
-        <div class="controles">
 
             <button
-                class="boton"
-                id="botonActualizar"
-                onclick="cargarDatos()">
+                class="refresh"
+                onclick="cargarInvitados()">
 
                 ↻ &nbsp; Actualizar respuestas
 
             </button>
 
+
         </div>
 
 
-        <div class="tabla-wrapper">
 
-            <table>
+        <div
+            class="table-wrap"
+            id="tablaContainer">
 
-                <thead>
-
-                    <tr>
-
-                        <th>
-                            Invitado
-                        </th>
-
-                        <th>
-                            Personas
-                        </th>
-
-                        <th>
-                            Estado
-                        </th>
-
-                    </tr>
-
-                </thead>
-
-
-                <tbody id="lista">
-
-                    <tr>
-
-                        <td
-                            colspan="3"
-                            class="mensaje">
-
-                            Cargando respuestas...
-
-                        </td>
-
-                    </tr>
-
-                </tbody>
-
-            </table>
+            <div class="loading">
+                Cargando respuestas...
+            </div>
 
         </div>
 
@@ -985,66 +879,145 @@ tbody tr:last-child td {
     </section>
 
 
-    <div class="footer">
+</div>
 
-        El secreto está en el aire
-        <span>✦</span>
-        Tamy & Thiago
+
+
+<!-- =====================================================
+     MODAL EDITAR
+====================================================== -->
+
+<div
+    class="modal-bg"
+    id="modalEditar">
+
+
+    <div class="modal">
+
+
+        <h2>
+            Editar invitado
+        </h2>
+
+
+        <div class="form-group">
+
+            <label>
+                Nombre
+            </label>
+
+            <input
+                type="text"
+                id="editNombre">
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>
+                Personas
+            </label>
+
+            <input
+                type="number"
+                id="editPersonas"
+                min="0">
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>
+                Estado
+            </label>
+
+            <select id="editEstado">
+
+                <option value="confirmado">
+                    Confirmado
+                </option>
+
+                <option value="no">
+                    No asiste
+                </option>
+
+                <option value="pendiente">
+                    Pendiente
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <div class="modal-buttons">
+
+            <button
+                class="modal-btn cancel"
+                onclick="cerrarModal()">
+
+                Cancelar
+
+            </button>
+
+
+            <button
+                class="modal-btn save"
+                onclick="guardarEdicion()">
+
+                Guardar cambios
+
+            </button>
+
+        </div>
+
 
     </div>
-
 
 </div>
 
 
+
 <script>
 
-/* =====================================================
-   CONEXIÓN CON TU APPS SCRIPT
-===================================================== */
+
+// =====================================================
+// URL DEL GOOGLE APPS SCRIPT
+// =====================================================
 
 const SCRIPT_URL =
-"https://script.google.com/macros/s/AKfycbzjrfUcgu0RafzyAqLHOs7UbPneYO492QBNw7lETNyadxrtTcTYRO_SZGBom_k9ZZEM/exec";
+    "https://script.google.com/macros/s/AKfycbzjrfUcgu0RafzyAqLHOs7UbPneYO492QBNW7lETNyadxrtTcTYRO_SZGBom_k9ZZEM/exec";
 
 
-/* =====================================================
-   CARGAR DATOS
-===================================================== */
+// =====================================================
+// VARIABLES
+// =====================================================
 
-async function cargarDatos() {
+let invitados = [];
+
+let filaEditando = null;
 
 
-    const boton =
+// =====================================================
+// CARGAR INVITADOS
+// =====================================================
+
+async function cargarInvitados() {
+
+
+    const container =
         document.getElementById(
-            "botonActualizar"
+            "tablaContainer"
         );
 
 
-    const lista =
-        document.getElementById(
-            "lista"
-        );
-
-
-    const punto =
-        document.getElementById(
-            "punto"
-        );
-
-
-    const conexionTexto =
-        document.getElementById(
-            "conexionTexto"
-        );
-
-
-    boton.disabled = true;
-
-    conexionTexto.textContent =
-        "Actualizando...";
-
-    punto.className =
-        "punto";
+    container.innerHTML = `
+        <div class="loading">
+            Cargando respuestas...
+        </div>
+    `;
 
 
     try {
@@ -1052,97 +1025,248 @@ async function cargarDatos() {
 
         const respuesta =
             await fetch(
-
                 SCRIPT_URL +
-                "?action=getInvitados"
-
+                "?action=getInvitados&t=" +
+                Date.now()
             );
 
 
-        if (!respuesta.ok) {
-
-            throw new Error(
-                "No se pudo conectar"
-            );
-
-        }
-
-
-        const datos =
+        invitados =
             await respuesta.json();
 
 
-        mostrarDatos(datos);
+        mostrarInvitados();
+
+        actualizarEstadisticas();
 
 
-        punto.className =
-            "punto ok";
-
-
-        conexionTexto.textContent =
-            "Conectado · actualizado ahora";
-
-
-    }
-
-
-    catch (error) {
-
-
-        console.error(
-            "Error:",
-            error
-        );
-
-
-        punto.className =
-            "punto error";
-
-
-        conexionTexto.textContent =
-            "No se pudo conectar con las respuestas";
-
-
-        lista.innerHTML = `
-
-            <tr>
-
-                <td
-                    colspan="3"
-                    class="mensaje">
-
-                    No se pudieron cargar
-                    las respuestas.
-
-                    <br><br>
-
-                    Si es la primera vez que abrís
-                    el panel, puede ser necesario
-                    revisar la conexión del navegador.
-
-                </td>
-
-            </tr>
-
+        document.getElementById(
+            "connection"
+        ).innerHTML = `
+            <span></span>
+            Conectado · actualizado ahora
         `;
 
+
     }
 
 
-    finally {
+    catch(error) {
 
-        boton.disabled = false;
+
+        console.error(error);
+
+
+        document.getElementById(
+            "connection"
+        ).innerHTML = `
+            <span style="background:#b66"></span>
+            No se pudieron cargar las respuestas
+        `;
+
+
+        container.innerHTML = `
+            <div class="empty">
+                No se pudieron cargar las respuestas.
+                <br><br>
+                Tocá "Actualizar respuestas" para intentar nuevamente.
+            </div>
+        `;
 
     }
 
 }
 
 
-/* =====================================================
-   MOSTRAR DATOS
-===================================================== */
 
-function mostrarDatos(datos) {
+// =====================================================
+// MOSTRAR INVITADOS
+// =====================================================
+
+function mostrarInvitados() {
+
+
+    const container =
+        document.getElementById(
+            "tablaContainer"
+        );
+
+
+    if (
+        !invitados ||
+        invitados.length === 0
+    ) {
+
+        container.innerHTML = `
+            <div class="empty">
+                Todavía no hay respuestas.
+            </div>
+        `;
+
+        return;
+
+    }
+
+
+    let html = `
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>
+                        Invitado
+                    </th>
+
+                    <th>
+                        Personas
+                    </th>
+
+                    <th>
+                        Estado
+                    </th>
+
+                    <th>
+                        Acciones
+                    </th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+    `;
+
+
+    invitados.forEach(
+        function(invitado) {
+
+
+            let estado =
+                String(
+                    invitado.estado ||
+                    "pendiente"
+                ).toLowerCase();
+
+
+            let textoEstado =
+                estado;
+
+
+            if (
+                estado === "confirmado"
+            ) {
+
+                textoEstado =
+                    "Confirmado";
+
+            }
+
+
+            if (
+                estado === "no"
+            ) {
+
+                textoEstado =
+                    "No asiste";
+
+            }
+
+
+            if (
+                estado === "pendiente"
+            ) {
+
+                textoEstado =
+                    "Pendiente";
+
+            }
+
+
+            html += `
+
+                <tr>
+
+                    <td>
+                        ${escapeHTML(
+                            invitado.nombre
+                        )}
+                    </td>
+
+                    <td>
+                        ${Number(
+                            invitado.personas
+                        ) || 0}
+                    </td>
+
+                    <td>
+
+                        <span
+                            class="status ${escapeHTML(estado)}">
+
+                            ${textoEstado}
+
+                        </span>
+
+                    </td>
+
+                    <td>
+
+                        <div class="actions">
+
+                            <button
+                                class="btn btn-edit"
+                                onclick="abrirEditar(${invitado.fila})">
+
+                                ✏️ Editar
+
+                            </button>
+
+
+                            <button
+                                class="btn btn-delete"
+                                onclick="eliminarInvitado(${invitado.fila}, '${escapeJS(invitado.nombre)}')">
+
+                                🗑️ Eliminar
+
+                            </button>
+
+                        </div>
+
+                    </td>
+
+                </tr>
+
+            `;
+
+        }
+    );
+
+
+    html += `
+
+            </tbody>
+
+        </table>
+
+    `;
+
+
+    container.innerHTML =
+        html;
+
+}
+
+
+
+// =====================================================
+// ESTADÍSTICAS
+// =====================================================
+
+function actualizarEstadisticas() {
 
 
     let confirmados = 0;
@@ -1154,34 +1278,15 @@ function mostrarDatos(datos) {
     let pendientes = 0;
 
 
-    const lista =
-        document.getElementById(
-            "lista"
-        );
-
-
-    lista.innerHTML = "";
-
-
-    if (
-        !Array.isArray(datos)
-    ) {
-
-        datos = [];
-
-    }
-
-
-    datos.forEach(
+    invitados.forEach(
         function(invitado) {
 
 
             const estado =
                 String(
-                    invitado.estado || ""
-                )
-                .toLowerCase()
-                .trim();
+                    invitado.estado ||
+                    "pendiente"
+                ).toLowerCase();
 
 
             const cantidad =
@@ -1189,8 +1294,6 @@ function mostrarDatos(datos) {
                     invitado.personas
                 ) || 0;
 
-
-            /* CONFIRMADOS */
 
             if (
                 estado === "confirmado"
@@ -1203,16 +1306,8 @@ function mostrarDatos(datos) {
             }
 
 
-            /* NO ASISTE */
-
             else if (
-
-                estado === "no" ||
-
-                estado === "no asiste" ||
-
-                estado === "no voy"
-
+                estado === "no"
             ) {
 
                 noAsisten++;
@@ -1220,147 +1315,15 @@ function mostrarDatos(datos) {
             }
 
 
-            /* OTROS */
-
             else {
 
                 pendientes++;
 
             }
 
-
-            let claseEstado =
-                "estado-pendiente";
-
-
-            let textoEstado =
-                "Pendiente";
-
-
-            if (
-                estado === "confirmado"
-            ) {
-
-                claseEstado =
-                    "estado-confirmado";
-
-                textoEstado =
-                    "Confirmado";
-
-            }
-
-
-            else if (
-
-                estado === "no" ||
-
-                estado === "no asiste" ||
-
-                estado === "no voy"
-
-            ) {
-
-                claseEstado =
-                    "estado-no";
-
-                textoEstado =
-                    "No asiste";
-
-            }
-
-
-            /* FILA */
-
-            const fila =
-                document.createElement(
-                    "tr"
-                );
-
-
-            /* NOMBRE */
-
-            const celdaNombre =
-                document.createElement(
-                    "td"
-                );
-
-
-            celdaNombre.className =
-                "nombre";
-
-
-            celdaNombre.textContent =
-                invitado.nombre || "";
-
-
-            /* PERSONAS */
-
-            const celdaPersonas =
-                document.createElement(
-                    "td"
-                );
-
-
-            celdaPersonas.textContent =
-                cantidad;
-
-
-            /* ESTADO */
-
-            const celdaEstado =
-                document.createElement(
-                    "td"
-                );
-
-
-            const etiqueta =
-                document.createElement(
-                    "span"
-                );
-
-
-            etiqueta.className =
-                "estado " +
-                claseEstado;
-
-
-            etiqueta.textContent =
-                textoEstado;
-
-
-            celdaEstado.appendChild(
-                etiqueta
-            );
-
-
-            /* ARMAR FILA */
-
-            fila.appendChild(
-                celdaNombre
-            );
-
-
-            fila.appendChild(
-                celdaPersonas
-            );
-
-
-            fila.appendChild(
-                celdaEstado
-            );
-
-
-            lista.appendChild(
-                fila
-            );
-
         }
     );
 
-
-    /* =================================================
-       ACTUALIZAR NÚMEROS
-    ================================================== */
 
     document.getElementById(
         "confirmados"
@@ -1375,7 +1338,7 @@ function mostrarDatos(datos) {
 
 
     document.getElementById(
-        "no"
+        "noAsisten"
     ).textContent =
         noAsisten;
 
@@ -1385,53 +1348,425 @@ function mostrarDatos(datos) {
     ).textContent =
         pendientes;
 
+}
 
-    /* SIN RESPUESTAS */
 
-    if (
-        datos.length === 0
-    ) {
 
-        lista.innerHTML = `
+// =====================================================
+// ABRIR EDITAR
+// =====================================================
 
-            <tr>
+function abrirEditar(fila) {
 
-                <td
-                    colspan="3"
-                    class="mensaje">
 
-                    Todavía no hay respuestas.
+    const invitado =
+        invitados.find(
+            function(item) {
 
-                </td>
+                return Number(
+                    item.fila
+                ) === Number(fila);
 
-            </tr>
+            }
+        );
 
-        `;
+
+    if (!invitado) {
+
+        alert(
+            "No se encontró el invitado."
+        );
+
+        return;
+
+    }
+
+
+    filaEditando =
+        Number(fila);
+
+
+    document.getElementById(
+        "editNombre"
+    ).value =
+        invitado.nombre || "";
+
+
+    document.getElementById(
+        "editPersonas"
+    ).value =
+        Number(
+            invitado.personas
+        ) || 0;
+
+
+    document.getElementById(
+        "editEstado"
+    ).value =
+        invitado.estado || "pendiente";
+
+
+    document.getElementById(
+        "modalEditar"
+    ).classList.add("show");
+
+}
+
+
+
+// =====================================================
+// CERRAR MODAL
+// =====================================================
+
+function cerrarModal() {
+
+    document.getElementById(
+        "modalEditar"
+    ).classList.remove("show");
+
+    filaEditando = null;
+
+}
+
+
+
+// =====================================================
+// GUARDAR EDICIÓN
+// =====================================================
+
+async function guardarEdicion() {
+
+
+    if (!filaEditando) {
+
+        return;
+
+    }
+
+
+    const nombre =
+        document.getElementById(
+            "editNombre"
+        ).value.trim();
+
+
+    const personas =
+        document.getElementById(
+            "editPersonas"
+        ).value;
+
+
+    const estado =
+        document.getElementById(
+            "editEstado"
+        ).value;
+
+
+    if (!nombre) {
+
+        alert(
+            "Escribí el nombre del invitado."
+        );
+
+        return;
+
+    }
+
+
+    const boton =
+        document.querySelector(
+            ".save"
+        );
+
+
+    boton.disabled = true;
+
+    boton.textContent =
+        "Guardando...";
+
+
+    try {
+
+
+        const datos =
+            new URLSearchParams();
+
+
+        datos.append(
+            "action",
+            "editar"
+        );
+
+
+        datos.append(
+            "fila",
+            filaEditando
+        );
+
+
+        datos.append(
+            "nombre",
+            nombre
+        );
+
+
+        datos.append(
+            "personas",
+            personas
+        );
+
+
+        datos.append(
+            "estado",
+            estado
+        );
+
+
+        await fetch(
+            SCRIPT_URL,
+            {
+
+                method: "POST",
+
+                mode: "no-cors",
+
+                body: datos
+
+            }
+        );
+
+
+        cerrarModal();
+
+
+        /*
+         * Esperamos un momento para que
+         * Google Sheets termine de guardar.
+         */
+
+        setTimeout(
+            cargarInvitados,
+            700
+        );
+
+
+    }
+
+
+    catch(error) {
+
+
+        console.error(error);
+
+
+        alert(
+            "No se pudo guardar el cambio."
+        );
+
+    }
+
+
+    finally {
+
+        boton.disabled = false;
+
+        boton.textContent =
+            "Guardar cambios";
 
     }
 
 }
 
 
-/* =====================================================
-   CARGA INICIAL
-===================================================== */
 
-cargarDatos();
+// =====================================================
+// ELIMINAR INVITADO
+// =====================================================
+
+async function eliminarInvitado(
+    fila,
+    nombre
+) {
 
 
-/* =====================================================
-   ACTUALIZAR AUTOMÁTICAMENTE
-===================================================== */
+    const confirmar =
+        confirm(
+            "¿Querés eliminar a " +
+            nombre +
+            " de la lista?"
+        );
+
+
+    if (!confirmar) {
+
+        return;
+
+    }
+
+
+    try {
+
+
+        const datos =
+            new URLSearchParams();
+
+
+        datos.append(
+            "action",
+            "eliminar"
+        );
+
+
+        datos.append(
+            "fila",
+            fila
+        );
+
+
+        await fetch(
+            SCRIPT_URL,
+            {
+
+                method: "POST",
+
+                mode: "no-cors",
+
+                body: datos
+
+            }
+        );
+
+
+        setTimeout(
+            cargarInvitados,
+            700
+        );
+
+
+    }
+
+
+    catch(error) {
+
+
+        console.error(error);
+
+
+        alert(
+            "No se pudo eliminar el invitado."
+        );
+
+    }
+
+}
+
+
+
+// =====================================================
+// SEGURIDAD HTML
+// =====================================================
+
+function escapeHTML(text) {
+
+
+    return String(
+        text ?? ""
+    )
+    .replace(
+        /&/g,
+        "&amp;"
+    )
+    .replace(
+        /</g,
+        "&lt;"
+    )
+    .replace(
+        />/g,
+        "&gt;"
+    )
+    .replace(
+        /"/g,
+        "&quot;"
+    )
+    .replace(
+        /'/g,
+        "&#039;"
+    );
+
+}
+
+
+
+// =====================================================
+// SEGURIDAD JAVASCRIPT
+// =====================================================
+
+function escapeJS(text) {
+
+
+    return String(
+        text ?? ""
+    )
+    .replace(
+        /\\/g,
+        "\\\\"
+    )
+    .replace(
+        /'/g,
+        "\\'"
+    )
+    .replace(
+        /\r?\n/g,
+        " "
+    );
+
+}
+
+
+
+// =====================================================
+// CERRAR MODAL TOCANDO AFUERA
+// =====================================================
+
+document.getElementById(
+    "modalEditar"
+).addEventListener(
+    "click",
+    function(event) {
+
+        if (
+            event.target === this
+        ) {
+
+            cerrarModal();
+
+        }
+
+    }
+);
+
+
+
+// =====================================================
+// CARGA INICIAL
+// =====================================================
+
+cargarInvitados();
+
+
+
+// =====================================================
+// ACTUALIZAR CADA 30 SEGUNDOS
+// =====================================================
 
 setInterval(
-    cargarDatos,
+    cargarInvitados,
     30000
 );
+
 
 </script>
 
 
 </body>
-
 </html>
